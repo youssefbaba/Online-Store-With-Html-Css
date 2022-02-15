@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template | E-Commerce</title>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="Css/style.css">
+    <!-- <link rel="stylesheet" href="master.css"> -->
+    <!-- Normalize -->
+    <link rel="stylesheet" href="Css/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header>
+        <div class="icons">
+            <a href="index.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="login.html"><i class="fa-solid fa-lock"></i></a>
+            <a href="my-acount.html"><i class="fa-solid fa-user"></i></a>
+            <a href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+        </div>
+        <ul class="logo-cart fixed-top">
+            <li class="logo">
+                <a href="index.html">
+                    <img src="images/header/Logo.png" alt="Logo">
+                </a>
+            </li>
+            <li class="cart">
+                <a href="index.html">
+                    <i class="fa-solid fa-cart-shopping" data-number="2"></i>
+                </a>
+                <div class="hover">
+                    <p>You have<span>03 items</span>in your shopping bag</p>
+                    <div class="product product-one">
+                        <div class="image">
+                            <a href="#"><img src="images/cart/cart_01.jpg" alt="cart_01"></a>
+                        </div>
+                        <div class="description">
+                            <a href="#">
+                                <h4>dummy product name</h4>
+                            </a>
+                            <p>Price : <span>$</span> <span>300.00</span></p>
+                            <p>Qt : <span>02</span></p>
+                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="product product-two">
+                        <div class="image">
+                            <a href="#"><img src="images/cart/cart_02.jpg" alt="cart_02"></a>
+                        </div>
+                        <div class="description">
+                            <a href="#">
+                                <h4>dummy product name</h4>
+                            </a>
+                            <p>Price : <span>£</span> <span>200.00</span></p>
+                            <p>Qt : <span>01</span></p>
+                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="total">
+                        <h4>Total</h4>
+                        <h4><span>$</span> <span> 500.00</span></h4>
+                    </div>
+                    <div class="links">
+                        <a href="cart.html" data-text="view cart">View cart</a>
+                        <a href="checkout.html" data-text="check out">Check out</a>
+                    </div>
+                </div>
+            </li>
+            <li class="bars" onclick="openNav()"><i class="fa-solid fa-bars"></i></li>
+            <li class="nav-menu" id="my-nav-menu">
+                <i class="fa-solid fa-xmark close" onclick="closeNav()"></i>
+                <ul>
+                    <li><a href="index.html" data-text="Home">Home</a></li>
+                    <li><a href="shop.html" data-text="Products">Products</a></li>
+                    <li><a href="shop-sidebar.html" data-text="Accesories">Accesories</a></li>
+                    <li><a href="shop-list.html" data-text="Lookbook">Lookbook</a></li>
+                    <li><a href="blog.html" data-text="Blog">Blog</a></li>
+                    <li class="pages">
+                        <a href="index.html" data-text="Pages">Pages</a>
+                        <div class="sub-nav-menu">
+                            <ul>
+                                <li class="sub-nav-menu-title">Page's</li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                                <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
+                                <li><a href="shop-list.html">Shop List</a></li>
+                                <li><a href="shop-list-right-sidebar.html">Shop List right sidebar</a></li>
+                                <li><a href="single-product.html">Single Product</a></li>
+                                <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
+                                <li><a href="cart.html">Shopping Cart</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="order.html">Order</a></li>
+                                <li><a href="login.html">login / Registration</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="single-blog.html">Single Blog</a></li>
+                                <li><a href="single-blog-sidebar.html">Single Blog Sidebar</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="about.html" data-text="About us">About us</a></li>
+                    <li><a href="contact.html" data-text="Contact">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu">
+            <div>Menu</div>
+            <input type="checkbox" class="toggle-Sidebar" id="toggle-Sidebar">
+            <label class="bars-icon" for="toggle-Sidebar">
+                <div class="bar top"></div>
+                <div class="bar center"></div>
+                <div class="bar bottom"></div>
+            </label>
+            <nav class="navigation" id="my-navigation">
+                <ul>
+                    <li class="home"><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Products</a></li>
+                    <li><a href="shop-sidebar.html">Accesories</a></li>
+                    <li><a href="shop-list.html">Lookbook</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li class="pages">
+                        <a href="index.html">
+                            <span>pages</span>
+                            <label class="plus-icon" for="toggle-plus"></label>
+                        </a>
+                        <input type="checkbox" id="toggle-plus" class="toggle-plus">
+                        <ul class="sub-menu">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                            <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
+                            <li><a href="shop-list.html">Shop List</a></li>
+                            <li><a href="shop-list-right-sidebar.html">Shop List right sidebar</a></li>
+                            <li><a href="single-product.html">Single Product</a></li>
+                            <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
+                            <li><a href="cart.html">Shopping Cart</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="order.html">Order</a></li>
+                            <li><a href="login.html">login / Registration</a></li>
+                            <li><a href="my-account.html">My Account</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="single-blog.html">Single Blog</a></li>
+                            <li><a href="single-blog-sidebar.html">Single Blog Sidebar</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatum unde tempore, enim nihil id,
+            consectetur quidem fugit molestiae harum neque praesentium hic, iste obcaecati repellat aliquid quasi omnis
+            soluta?</p>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.0.js"></script> -->
+    <script>
+        var bars = document.querySelector('.bars-icon');
+        var plus = document.querySelector('.plus-icon');
+        var navbar = document.querySelector('.fixed-top');
+
+
+        bars.addEventListener('click', function () {
+            bars.classList.toggle('change-bars');
+        })
+
+        plus.addEventListener('click', function () {
+            plus.classList.toggle('change-plus');
+        })
+
+        function openNav() {
+            document.getElementById("my-nav-menu").style.left = "0px";
+        }
+
+        function closeNav() {
+            document.getElementById("my-nav-menu").style.left = "-225px";
+        }
+
+        window.onscroll = () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('nav-active');
+            } else {
+                navbar.classList.remove('nav-active');
+            }
+        };
+    </script>
+</body>
+
+</html>
