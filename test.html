@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+
+<body>
+    <h1 class="title">Responsive Slick Carousel w/ Multiple Thumbnails</h1>
+    <div class="gallery gallery-responsive portfolio_slider">
+        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
+        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
+        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
+        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
+        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
+        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
+        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
+        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        $('.product-slider').slick({
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev">p<br />r<br />e<br />v</button>',
+            nextArrow: '<button type="button" class="slick-next">n<br />e<br />x<br />t</button>',
+            responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+            ]
+        });
+    </script>
+</body>
+
+
+
+</html>
