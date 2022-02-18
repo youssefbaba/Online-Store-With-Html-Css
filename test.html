@@ -10,48 +10,49 @@
 </head>
 
 <body>
-    <h1 class="title">Responsive Slick Carousel w/ Multiple Thumbnails</h1>
-    <div class="gallery gallery-responsive portfolio_slider">
-        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
-        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
-        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
-        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
-        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
-        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
-        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
-        <div class="inner"><img src="images/featured-product/product_01.jpg"></div>
+
+    <p>In this example, we use JavaScript to "click" on the London button, to open the tab on page load.</p>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
     <script>
-        $('.product-slider').slick({
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            prevArrow: '<button type="button" class="slick-prev">p<br />r<br />e<br />v</button>',
-            nextArrow: '<button type="button" class="slick-next">n<br />e<br />x<br />t</button>',
-            responsive: [{
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                    }
-                },
-            ]
-        });
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
     </script>
+
 </body>
-
-
 
 </html>
