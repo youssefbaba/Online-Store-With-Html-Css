@@ -503,7 +503,7 @@ header .menu .navigation>ul>li .change-plus::after {
         z-index: 9999;
     }
 
-    header .logo-cart.nav-active {
+    header .nav-active {
         height: 80px;
         background-color: #eeeeee;
         transition: 0.3s ease-in-out;
@@ -2249,6 +2249,7 @@ footer .container .your-choice-products .content .image:hover::before {
     position: fixed;
     bottom: 10px;
     right: 20px;
+    z-index: 9999;
 }
 
 @media (max-width:479px) {

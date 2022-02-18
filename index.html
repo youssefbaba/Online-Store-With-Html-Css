@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="top">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -1635,7 +1635,7 @@
             </div>
         </div>
         <!-- <button onclick="scrollTop()" id="scroll-to-top"><i class="fa-solid fa-angles-up"></i></button> -->
-        <a href="#top" id="scroll-to-top"><i class="fa-solid fa-angles-up"></i></a>
+        <a href="#" id="scroll-to-top" onclick="scrollTop()"><i class="fa-solid fa-angles-up"></i></a>
         <!-- <button onclick="scrollTop()" id="scroll-to-top"></button> -->
     </div>
     <!-- End Copyright And Payment -->
@@ -1650,6 +1650,7 @@
         var bars = document.querySelector('.bars-icon');
         var plus = document.querySelector('.plus-icon');
         var navbar = document.querySelector('.fixed-top');
+        var mylink = document.getElementById("scroll-to-top");
 
 
         // change icon bars to X
@@ -1674,18 +1675,6 @@
         function closeNav() {
             document.getElementById("my-nav-menu").style.left = "-225px";
         }
-
-
-        // change background color of header when scroll down 
-        window.onscroll = () => {
-            if (window.scrollY > 100) {
-                navbar.classList.add('nav-active');
-            } else {
-                navbar.classList.remove('nav-active');
-            }
-        };
-
-
         // Slide Automatic and Manual
         var slideIndex = 1;
         var timer = null;
@@ -1805,20 +1794,28 @@
         document.getElementById("default-open").click();
 
 
-        // Scroll To Top
-        //Get the button:
-        mylink = document.getElementById("scroll-to-top");
-        // When the user scrolls down 20px from the top of the document, show the button
+        // Scroll To Top  when click on button   and  change color of header when scroll down 
         window.onscroll = function () {
             scrollFunction()
         };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                 mylink.style.display = "block";
             } else {
                 mylink.style.display = "none";
             }
+            if (window.scrollY > 100) {
+                navbar.classList.add('nav-active');
+            } else {
+                navbar.classList.remove('nav-active');
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function scrollTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
     </script>
 </body>
