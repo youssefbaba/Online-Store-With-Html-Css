@@ -177,7 +177,7 @@
 }
 
 .account .container .first-child .panel table tbody tr td {
-    padding: 7px 20px;
+    padding: 7px 15px;
     color: var(--fourth-color);
     border-bottom: 1px solid #e5e5e5;
 }
@@ -192,12 +192,16 @@
     padding: 15px 30px 0;
 }
 
+.account .container .second-child .panel {
+    padding: 0 30px;
+}
+
 .account .container .second-child .panel .accordion {
     border: none;
     outline: none;
     background-color: #f6f6f6;
     color: var(--color-dark);
-    width: calc(100% - 30px);
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -220,18 +224,13 @@
 }
 
 .account .container .second-child .panel .accordion,
-.account .container .second-child .panel .panel {
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.account .container .second-child .panel .accordion,
-.account .container .second-child .panel .panel p {
+.account .container .second-child .panel .panel p,
+.account .container .second-child .panel .panel .image {
     margin-bottom: 15px;
 }
 
 .account .container .second-child .panel .accordion:first-of-type {
-    margin-top: 22px;
+    margin-top: 30px;
 }
 
 .account .container .second-child .panel .panel p {
@@ -239,15 +238,11 @@
     font-size: 13px;
     line-height: 20px;
     color: var(--fourth-color);
-    padding-left: 30px;
-    padding-right: 30px;
 }
 
 .account .container .second-child .panel .panel .image {
     display: flex;
     gap: 10px;
-    padding-left: 30px;
-    padding-bottom: 15px;
 }
 
 .account .container .second-child .btn {
@@ -261,7 +256,8 @@
     text-transform: uppercase;
     font-weight: 400;
     font-size: 13px;
-    margin: 15px 0 30px 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -304,8 +300,6 @@
         padding: 7px 30px;
     }
 }
-
-@media (min-width: 992px) {}
 
 /* End Account  */
 

@@ -1,26 +1,507 @@
-ul.breadcrumb {
-    padding: 10px 16px;
-    list-style: none;
-    background-color: #eee;
+/* Start Breadcrumb  */
+.breadcrumb {
+    background-image: url("../images/breadcrumb/image_01.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
 }
 
-ul.breadcrumb li {
-    display: inline;
-    font-size: 18px;
+.breadcrumb::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
 }
 
-ul.breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
+.breadcrumb .container {
+    /* for z-index */
+    position: relative;
+}
+
+.breadcrumb .container h2 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--white-color);
+    text-align: center;
+    padding: 40px 0;
+    text-transform: uppercase;
+}
+
+.breadcrumb .container ul {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.breadcrumb .container ul li+li:before {
+    padding: 15px;
+    color: var(--white-color);
     content: "/\00a0";
+    font-weight: 700;
+    font-size: 14px;
 }
 
-ul.breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
+.breadcrumb .container ul li a {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    transition: var(--main-transition) ease-in-out;
+    cursor: auto;
 }
 
-ul.breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
+.breadcrumb .container ul li:first-child a {
+    cursor: pointer;
 }
+
+.breadcrumb .container ul li:first-child a:hover {
+    color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+    .breadcrumb {
+        top: 100px;
+    }
+
+    .breadcrumb .container h2 {
+        font-size: 45px;
+        line-height: 33px;
+        padding: 100px 0;
+    }
+}
+
+/* End Breadcrumb  */
+/* Start Wishlist  */
+.wishlist {
+    background-color: #f6f6f6;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+/* Start tabs */
+.wishlist .container .tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.wishlist .container .tabs button {
+    border: none;
+    outline: none;
+    background-color: var(--white-color);
+    color: var(--fourth-color);
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.wishlist .container .tabs button.active {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+/* End tabs */
+
+
+/* First Tab Content */
+.wishlist .container .tab-content {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.wishlist .container .tab-content>div {
+    background-color: var(--white-color);
+    padding: 30px 15px;
+}
+
+.wishlist .container .tab-content h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--fifth-color);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.wishlist .container .tab-content p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--fourth-color);
+}
+
+.wishlist .container .shopping-cart p {
+    margin-bottom: 15px;
+}
+
+.wishlist .container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.wishlist .container form input,
+.wishlist .container form select,
+.wishlist .container form textarea {
+    background-color: #f6f6f6;
+    caret-color: var(--fourth-color);
+    color: var(--fourth-color);
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.wishlist .container form input,
+.wishlist .container form select {
+    height: 40px;
+    padding: 0 20px;
+}
+
+.wishlist .container form textarea {
+    height: 100px;
+    padding: 15px 20px;
+}
+
+.wishlist .container form button,
+.wishlist .container .btn {
+    background-color: var(--third-color);
+    color: var(--white-color);
+    height: 35px;
+    line-height: 35px;
+    padding: 0 30px;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.wishlist .container form button::before,
+.wishlist .container .btn::before {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+.wishlist .container form button::before {
+    content: attr(data-text);
+}
+
+.wishlist .container .btn::before {
+    content: "Place Order";
+}
+
+.wishlist .container form button:hover::before,
+.wishlist .container .btn:hover::before {
+    left: 0;
+}
+
+.wishlist .container table.first-type {
+    width: 100%;
+}
+
+.wishlist .container table.first-type tr td {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.wishlist .container table.first-type tbody tr td {
+    padding: 7px 20px;
+    color: var(--fourth-color);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.wishlist .container table.first-type tr td:last-child,
+.wishlist .container table.first-type tr th:last-child {
+    text-align: right;
+}
+
+.wishlist .container table.first-type tfoot tr td {
+    color: var(--third-color);
+    padding: 15px 30px 0;
+}
+
+.wishlist .container .check-out,
+.wishlist .container .order-complete {
+    gap: 0;
+}
+
+.wishlist .container table.first-type thead {
+    background-color: #f5f5f5;
+    text-align: left;
+}
+
+.wishlist .container table.first-type thead tr th {
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    padding: 10px 30px;
+}
+
+.wishlist .container .accordion {
+    border: none;
+    outline: none;
+    background-color: #f6f6f6;
+    color: var(--color-dark);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 900;
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+.wishlist .container .panel {
+    background-color: var(--white-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0px 30px;
+}
+
+.wishlist .container .accordion:after {
+    content: '\f0d7';
+    font: var(--fa-font-solid);
+}
+
+.wishlist .container .active:after {
+    content: "\f0d8";
+}
+
+.wishlist .container .accordion,
+.wishlist .container .panel p,
+.wishlist .container .panel .image {
+    margin-bottom: 15px;
+}
+
+.wishlist .container .panel .image {
+    display: flex;
+    gap: 10px;
+}
+
+.wishlist .container .tab-content .thank {
+    background-color: var(--white-color);
+    margin-bottom: 30px;
+}
+
+.wishlist .container .tab-content .thank p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-dark);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.wishlist .container .tab-content .info {
+    background-color: var(--white-color);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.wishlist .container .tab-content .info>div {
+    flex-basis: 50%;
+    padding: 10px;
+}
+
+.wishlist .container .tab-content .info>div h4,
+.wishlist .container .tab-content .info>div p,
+.wishlist .container .tab-content .info>div a {
+    display: block;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wishlist .container .tab-content .info>div h4 {
+    margin: 0;
+}
+
+.wishlist .container .tab-content .info>div a {
+    transition: 0.3s ease-in-out;
+}
+
+.wishlist .container .tab-content .info>div a:hover {
+    color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+    .wishlist {
+        padding-top: calc(var(--section-padding) * 2);
+        padding-bottom: calc(var(--section-padding) * 2);
+        margin-top: 100px;
+    }
+
+    .wishlist .container .tabs {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .wishlist .container .tabs button,
+    .wishlist .container .tab-content .info>div {
+        flex-basis: 25%;
+    }
+
+    .wishlist .container .tab-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .wishlist .container .shopping-cart>table,
+    .wishlist .container .shopping-cart .culculate-shipping,
+    .wishlist .container .order-complete .thank,
+    .wishlist .container .order-complete .info {
+        flex-basis: 100%;
+    }
+
+    .wishlist .container .shopping-cart .coupon-discount,
+    .wishlist .container .shopping-cart .payment-details {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    .wishlist .container .check-out>div,
+    .wishlist .container .order-complete .our-order,
+    .wishlist .container .order-complete .payment-method {
+        flex-basis: 50%;
+    }
+
+    .wishlist .container .tab-content>div {
+        padding: 30px;
+    }
+
+    .wishlist .container table.first-type tbody tr td {
+        padding: 7px 30px;
+    }
+
+    .wishlist .container .culculate-shipping form {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .wishlist .container .tab-content .culculate-shipping form .form-group {
+        flex-basis: calc((100% - 45px) / 3);
+    }
+
+    .wishlist .container .tab-content .info>div h4 {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .wishlist .container .tab-content .info>div p,
+    .wishlist .container .tab-content .info>div a {
+        font-size: 13px;
+    }
+
+}
+
+/* End Wishlist  */
+/* Start Footer */
+footer {
+    background-color: #eeeeee;
+}
+
+footer .container .email-newsletters {
+    flex-basis: 100%;
+}
+
+footer .container .email-newsletters form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .container .email-newsletters form input {
+    flex-basis: 100%;
+    border: none;
+    background-color: #f6f6f6;
+    padding: 12px 20px;
+    caret-color: var(--fourth-color);
+}
+
+footer .container .email-newsletters form button {
+    background-color: #f7f7f7;
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer .container .email-newsletters form button::before {
+    content: "Subscribe";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+footer .container .email-newsletters form button:hover::before {
+    left: 0;
+}
+
+footer .container .email-newsletters form button:focus,
+footer .container .email-newsletters form input:focus {
+    outline: none;
+}
+
+footer .container .email-newsletters form input::placeholder {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--fourth-color);
+}
+
+@media (min-width: 768px) {
+    footer .container .email-newsletters {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    footer .container .email-newsletters {
+        flex-basis: calc(100% / 3);
+    }
+}
+
+/* End Footer */
