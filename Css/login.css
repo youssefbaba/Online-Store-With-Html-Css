@@ -1,0 +1,300 @@
+/* Start Breadcrumb  */
+.breadcrumb {
+    background-image: url("../images/breadcrumb/image_01.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.breadcrumb::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.breadcrumb .container {
+    /* for z-index */
+    position: relative;
+}
+
+.breadcrumb .container h2 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--white-color);
+    text-align: center;
+    padding: 40px 0;
+    text-transform: uppercase;
+}
+
+.breadcrumb .container ul {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.breadcrumb .container ul li+li:before {
+    padding: 15px;
+    color: var(--white-color);
+    content: "/\00a0";
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.breadcrumb .container ul li a {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    transition: var(--main-transition) ease-in-out;
+    cursor: auto;
+}
+
+.breadcrumb .container ul li:first-child a {
+    cursor: pointer;
+}
+
+.breadcrumb .container ul li:first-child a:hover {
+    color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+    .breadcrumb {
+        top: 100px;
+    }
+
+    .breadcrumb .container h2 {
+        font-size: 45px;
+        line-height: 33px;
+        padding: 100px 0;
+    }
+}
+
+/* End Breadcrumb  */
+/* Start Registration */
+.registration {
+    background-color: #f6f6f6;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.registration .container .registered-customers,
+.registration .container .new-customer {
+    background-color: var(--white-color);
+    padding: 30px 15px;
+}
+
+.registration .container .registered-customers h4,
+.registration .container .new-customer h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--fifth-color);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.registration .container .registered-customers p,
+.registration .container .new-customer p,
+.registration .container .registered-customers form a {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--fourth-color);
+}
+
+.registration .container .registered-customers p,
+.registration .container .new-customer p {
+    margin-bottom: 15px;
+}
+
+.registration .container .registered-customers form,
+.registration .container .new-customer form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registration .container .registered-customers form input,
+.registration .container .new-customer input:not(input[type="checkbox"]) {
+    height: 40px;
+    background-color: #f6f6f6;
+    border: none;
+    caret-color: var(--fourth-color);
+    padding: 0 20px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--fourth-color);
+}
+
+.registration .container .registered-customers form a {
+    transition: var(--main-transition) ease-in-out;
+}
+
+.registration .container .registered-customers form a:hover {
+    color: var(--secondary-color);
+}
+
+.registration .container .registered-customers form button,
+.registration .container .new-customer form button {
+    background-color: var(--third-color);
+    color: var(--white-color);
+    height: 35px;
+    line-height: 35px;
+    padding: 0 30px;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.registration .container .registered-customers form button::before,
+.registration .container .new-customer form button::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+.registration .container .registered-customers form button:hover::before,
+.registration .container .new-customer form button:hover::before {
+    left: 0;
+}
+
+.registration .container .registered-customers form input:focus,
+.registration .container .registered-customers form button:focus,
+.registration .container .new-customer form input:focus,
+.registration .container .new-customer form button:focus {
+    outline: none;
+}
+
+.registration .container .new-customer form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.registration .container .new-customer form label[for="sign-up"] {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-dark);
+}
+
+@media (min-width: 768px) {
+    .registration {
+        margin-top: 100px;
+        padding-top: calc(var(--section-padding) * 2);
+        padding-bottom: calc(var(--section-padding) * 2);
+    }
+
+    .registration .container .registered-customers,
+    .registration .container .new-customer {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .registration .container {
+        display: flex;
+        gap: 25px;
+    }
+
+    .registration .container .registered-customers,
+    .registration .container .new-customer {
+        flex-basis: 50%;
+    }
+
+}
+
+/* End Registration */
+
+/* Start Footer */
+footer {
+    background-color: #eeeeee;
+}
+
+footer .container .email-newsletters {
+    flex-basis: 100%;
+}
+
+footer .container .email-newsletters form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .container .email-newsletters form input {
+    flex-basis: 100%;
+    border: none;
+    background-color: #f6f6f6;
+    padding: 12px 20px;
+    caret-color: var(--fourth-color);
+}
+
+footer .container .email-newsletters form button {
+    background-color: #f7f7f7;
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer .container .email-newsletters form button::before {
+    content: "Subscribe";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+footer .container .email-newsletters form button:hover::before {
+    left: 0;
+}
+
+footer .container .email-newsletters form button:focus,
+footer .container .email-newsletters form input:focus {
+    outline: none;
+}
+
+footer .container .email-newsletters form input::placeholder {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--fourth-color);
+}
+
+@media (min-width: 768px) {
+    footer .container .email-newsletters {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    footer .container .email-newsletters {
+        flex-basis: calc(100% / 3);
+    }
+}
+
+/* End Footer */
