@@ -1238,7 +1238,7 @@ header .menu .navigation>ul>li .change-plus::after {
 .featured-product .container .products .product .image-product .product-icons {
     display: flex;
     width: calc(100% - 40px);
-    padding: 8px 0;
+    padding: 10px 0;
     position: absolute;
     bottom: -35px;
     left: 50%;
@@ -1265,7 +1265,7 @@ header .menu .navigation>ul>li .change-plus::after {
 }
 
 .featured-product .container .products .product .image-product .product-icons a i {
-    color: var(--color-dark);
+    color: var(--fourth-color);
     font-size: 13px;
 }
 
@@ -1675,7 +1675,7 @@ header .menu .navigation>ul>li .change-plus::after {
 .purchase-online-on-hurst .container .tab-content .products-online .product .image-product .product-icons {
     display: flex;
     width: calc(100% - 40px);
-    padding: 8px 0;
+    padding: 10px 0;
     position: absolute;
     bottom: -35px;
     left: 50%;
@@ -1698,11 +1698,11 @@ header .menu .navigation>ul>li .change-plus::after {
 }
 
 .purchase-online-on-hurst .container .tab-content .products-online .product .image-product .product-icons a:not(:last-child) {
-    border-right: 1px solid var(--color-dark)
+    border-right: 1px solid var(--fourth-color)
 }
 
 .purchase-online-on-hurst .container .tab-content .products-online .product .image-product .product-icons a i {
-    color: var(--color-dark);
+    color: var(--fourth-color);
     font-size: 13px;
 }
 

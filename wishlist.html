@@ -31,7 +31,7 @@
                 </a>
             </li>
             <li class="cart">
-                <a href="index.html">
+                <a href="cart.html">
                     <i class="fa-solid fa-cart-shopping" data-number="2"></i>
                 </a>
                 <div class="hover">
@@ -175,7 +175,7 @@
     </div>
     <!-- End Breadcrumb -->
     <!-- Start Wishlist -->
-    <div class="wishlist">
+    <div class="division">
         <div class="container">
             <div class="tabs">
                 <button class="tab-links" onclick="openWishlist(event, 'shopping-cart')">shopping-cart</button>
@@ -184,6 +184,99 @@
                 <button class="tab-links" onclick="openWishlist(event, 'order-complete')">order-complete</button>
             </div>
             <div id="shopping-cart" class="tab-content shopping-cart">
+                <div class="overflow">
+                    <table class="second-type">
+                        <thead>
+                            <tr>
+                                <th class="product-name">product</th>
+                                <th class="product-price">price</th>
+                                <th class="product-quantity">quantity</th>
+                                <th class="product-total">total</th>
+                                <th class="product-remove">remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_01.jpg" alt="image_01">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">small stool</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-quantity">
+                                    <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="number">1</span>
+                                    <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                                </td>
+                                <td class="product-total">
+                                    $112:00
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_02.jpg" alt="image_02">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">glass table</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-quantity">
+                                    <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="number">1</span>
+                                    <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                                </td>
+                                <td class="product-total">
+                                    $112:00
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_03.jpg" alt="image_03">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">walnut stand</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-quantity">
+                                    <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="number">1</span>
+                                    <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                                </td>
+                                <td class="product-total">
+                                    $112:00
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="coupon-discount">
                     <h4>coupon discount</h4>
                     <p>Enter your coupon code if you have one!</p>
@@ -240,7 +333,94 @@
                     </form>
                 </div>
             </div>
-            <div id="wishlist" class="tab-content wishlist">
+            <div id="wishlist" class="tab-content wishlist-child">
+                <div class="overflow">
+                    <table class="second-type">
+                        <thead>
+                            <tr>
+                                <th class="product-name">product</th>
+                                <th class="product-price">price</th>
+                                <th class="product-stock">stock Status</th>
+                                <th class="product-add-cart">add to cart</th>
+                                <th class="product-remove">remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_01.jpg" alt="image_01">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">small stool</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-stock">
+                                    En Stock
+                                </td>
+                                <td class="product-add-cart">
+                                    <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_02.jpg" alt="image_02">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">glass table</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-stock">
+                                    En Stock
+                                </td>
+                                <td class="product-add-cart">
+                                    <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_03.jpg" alt="image_03">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">walnut stand</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-stock">
+                                    En Stock
+                                </td>
+                                <td class="product-add-cart">
+                                    <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div id="check-out" class="tab-content check-out">
                 <div class="billing-details">
@@ -700,11 +880,7 @@
         // Get the element with id = "defaultOpen"and click on it 
         document.getElementById("default-open").click();
 
-
-
-
         // Accordion
-
         var accordion = document.getElementsByClassName("accordion");
         var i;
 

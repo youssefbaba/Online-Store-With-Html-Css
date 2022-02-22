@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Product Page</title>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="Css/style.css">
+    <!-- Special Stylesheet -->
+    <link rel="stylesheet" href="Css/single-product.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="Css/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Cdn Slick Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+        integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header>
+        <ul class="logo-cart fixed-top">
+            <li class="logo">
+                <a href="index.html">
+                    <img src="images/header/Logo.png" alt="Logo">
+                </a>
+            </li>
+            <li class="cart">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping" data-number="2"></i>
+                </a>
+                <div class="hover">
+                    <p>You have<span>03 items</span>in your shopping bag</p>
+                    <div class="product product-one">
+                        <div class="image">
+                            <a href="single-product.html"><img src="images/cart/cart_01.jpg" alt="cart_01"></a>
+                        </div>
+                        <div class="description">
+                            <a href="single-product.html">
+                                <h4>Small Stool</h4>
+                            </a>
+                            <p>Price : <span>$</span> <span>300.00</span></p>
+                            <p>Qt : <span>02</span></p>
+                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="product product-two">
+                        <div class="image">
+                            <a href="single-product.html"><img src="images/cart/cart_02.jpg" alt="cart_02"></a>
+                        </div>
+                        <div class="description">
+                            <a href="single-product.html">
+                                <h4>Walnut Stand</h4>
+                            </a>
+                            <p>Price : <span>£</span> <span>200.00</span></p>
+                            <p>Qt : <span>01</span></p>
+                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="total">
+                        <h4>Total</h4>
+                        <h4><span>$</span> <span> 500.00</span></h4>
+                    </div>
+                    <div class="links">
+                        <a href="cart.html" data-text="view cart">View cart</a>
+                        <a href="checkout.html" data-text="check out">Check out</a>
+                    </div>
+                </div>
+            </li>
+            <li class="bars" onclick="openNav()"><i class="fa-solid fa-bars"></i></li>
+            <li class="nav-menu" id="my-nav-menu">
+                <i class="fa-solid fa-xmark close" onclick="closeNav()"></i>
+                <ul>
+                    <li><a href="index.html" data-text="Home">Home</a></li>
+                    <li><a href="shop.html" data-text="Products">Products</a></li>
+                    <li><a href="shop-sidebar.html" data-text="Accesories">Accesories</a></li>
+                    <li><a href="shop-list.html" data-text="Lookbook">Lookbook</a></li>
+                    <li><a href="blog.html" data-text="Blog">Blog</a></li>
+                    <li class="pages">
+                        <a href="index.html" data-text="Pages">Pages</a>
+                        <div class="sub-nav-menu">
+                            <ul>
+                                <li class="sub-nav-menu-title">Page's</li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                                <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
+                                <li><a href="shop-list.html">Shop List</a></li>
+                                <li><a href="shop-list-right-sidebar.html">Shop List right sidebar</a></li>
+                                <li><a href="single-product.html">Single Product</a></li>
+                                <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
+                                <li><a href="cart.html">Shopping Cart</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="order.html">Order</a></li>
+                                <li><a href="login.html">login / Registration</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="single-blog.html">Single Blog</a></li>
+                                <li><a href="single-blog-sidebar.html">Single Blog Sidebar</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="about.html" data-text="About us">About us</a></li>
+                    <li><a href="contact.html" data-text="Contact">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu">
+            <div>Menu</div>
+            <input type="checkbox" class="toggle-Sidebar" id="toggle-Sidebar">
+            <label class="bars-icon" for="toggle-Sidebar">
+                <div class="bar top"></div>
+                <div class="bar center"></div>
+                <div class="bar bottom"></div>
+            </label>
+            <nav class="navigation" id="my-navigation">
+                <ul>
+                    <li class="home"><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Products</a></li>
+                    <li><a href="shop-sidebar.html">Accesories</a></li>
+                    <li><a href="shop-list.html">Lookbook</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li class="pages">
+                        <a href="index.html">
+                            <span>pages</span>
+                            <label class="plus-icon" for="toggle-plus"></label>
+                        </a>
+                        <input type="checkbox" id="toggle-plus" class="toggle-plus">
+                        <ul class="sub-menu">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                            <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
+                            <li><a href="shop-list.html">Shop List</a></li>
+                            <li><a href="shop-list-right-sidebar.html">Shop List right sidebar</a></li>
+                            <li><a href="single-product.html">Single Product</a></li>
+                            <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
+                            <li><a href="cart.html">Shopping Cart</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="order.html">Order</a></li>
+                            <li><a href="login.html">login / Registration</a></li>
+                            <li><a href="my-account.html">My Account</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="single-blog.html">Single Blog</a></li>
+                            <li><a href="single-blog-sidebar.html">Single Blog Sidebar</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <h2>Single Product</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Single Product</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+    <!-- Start Single Product -->
+    <div class="single-product">
+        <div class="container">
+            <div class="slider-for">
+                <div class="image">
+                    <img src="images/single-product/image_01.jpg" alt="image_01" />
+                    <a class="view-full-screen" href="images/lightbox/image_01.jpg" data-lightbox="roadtrip"
+                        data-title="My caption">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </a>
+                </div>
+                <div class="image">
+                    <img src="images/single-product/image_02.jpg" alt="image_02" />
+                    <a class="view-full-screen" href="images/lightbox/image_02.jpg" data-lightbox="roadtrip"
+                        data-title="My caption">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </a>
+                </div>
+                <div class="image">
+                    <img src="images/single-product/image_04.jpg" alt="image_04" />
+                    <a class="view-full-screen" href="images/lightbox/image_04.jpg" data-lightbox="roadtrip"
+                        data-title="My caption">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </a>
+                </div>
+                <div class="image">
+                    <img src="images/single-product/image_06.jpg" alt="image_06" />
+                    <a class="view-full-screen" href="images/lightbox/image_06.jpg" data-lightbox="roadtrip"
+                        data-title="My caption">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </a>
+                </div>
+                <div class="image">
+                    <img src="images/single-product/image_03.jpg" alt="image_03" />
+                    <a class="view-full-screen" href="images/lightbox/image_03.jpg" data-lightbox="roadtrip"
+                        data-title="My caption">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </a>
+                </div>
+                <div class="image">
+                    <img src="images/single-product/image_05.jpg" alt="image_05" />
+                    <a class="view-full-screen" href="images/lightbox/image_05.jpg" data-lightbox="roadtrip"
+                        data-title="My caption">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="info">
+                <div class="desc">
+                    <div class="name-product-rating">
+                        <h4 class="name-product">partex special chair</h4>
+                        <div class="rating">
+                            <ul>
+                                <li>
+                                    <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
+                                            width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                            viewBox="0 0 432 408">
+                                            <path fill="#c87065"
+                                                d="M213 328L81 408l35-150L0 157l153-13L213 3l60 141l154 13l-117 101l35 150z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
+                                            width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                            viewBox="0 0 432 408">
+                                            <path fill="#c87065"
+                                                d="M213 328L81 408l35-150L0 157l153-13L213 3l60 141l154 13l-117 101l35 150z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
+                                            width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                            viewBox="0 0 432 408">
+                                            <path fill="#c87065"
+                                                d="M213 328L81 408l35-150L0 157l153-13L213 3l60 141l154 13l-117 101l35 150z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
+                                            width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                            viewBox="0 0 432 416">
+                                            <path fill="#c87065"
+                                                d="M427 160L310 261l35 150l-132-80l-132 80l35-150L0 160l153-13L213 5l60 142zM213 291l81 49l-22-91l71-62l-93-8l-37-86v198z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img"
+                                            width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
+                                            viewBox="0 0 432 416">
+                                            <path fill="#c87065"
+                                                d="M427 160L310 261l35 150l-132-80l-132 80l35-150L0 160l153-13L213 5l60 142zM213 291l81 49l-22-91l71-62l-93-8l-37-86v198z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <span>(27 Rating)</span>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <span>$ 56.20</span>
+                    </div>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have be suffered
+                        alteration in some form, by injected humou or randomised words which donot look even slightly
+                        believable. If you are going to use a passage of Lorem Ipsum.
+                    </p>
+                    <div class="color-size">
+                        <span>Color : </span>
+                        <ul class="list-color">
+                            <li>
+                                <a href="#" class="color-one"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="color-two"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="color-three"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="color-four"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="color-five"></a>
+                            </li>
+                        </ul>
+                        <span>Size : </span>
+                        <ul class="list-size">
+                            <li>
+                                <a href="#">M</a>
+                            </li>
+                            <li>
+                                <a href="#">S</a>
+                            </li>
+                            <li>
+                                <a href="#">L</a>
+                            </li>
+                            <li>
+                                <a href="#">SL</a>
+                            </li>
+                            <li>
+                                <a href="#">XL</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="quantity-icons">
+                        <div class="quanity">
+                            <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                            <span class="number">01</span>
+                            <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="icons">
+                            <a href="#"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                            <a href="#"><i class="fa-solid fa-rotate"></i></a>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <div class="image">
+                        <img src="images/single-product/image_01.jpg" alt="image_01" />
+                    </div>
+                    <div class="image">
+                        <img src="images/single-product/image_02.jpg" alt="image_02" />
+                    </div>
+                    <div class="image">
+                        <img src="images/single-product/image_04.jpg" alt="image_04" />
+                    </div>
+                    <div class="image">
+                        <img src="images/single-product/image_06.jpg" alt="image_06" />
+                    </div>
+                    <div class="image">
+                        <img src="images/single-product/image_03.jpg" alt="image_03" />
+                    </div>
+                    <div class="image">
+                        <img src="images/single-product/image_05.jpg" alt="image_05" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Single Product -->
+    <!-- Start Product Tab -->
+    <div class="product-tab">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-links" onclick="openCategory(event, 'description')">Description</button>
+                <button class="tab-links" onclick="openCategory(event, 'reviews')" id="default-open">Reviews</button>
+                <button class="tab-links" onclick="openCategory(event, 'information')">Information</button>
+                <button class="tab-links" onclick="openCategory(event, 'tags')">Tags</button>
+                <button class="tab-links" onclick="openCategory(event, 'productVideo')">Product Video</button>
+            </div>
+            <div id="description" class="tab-content description">
+                <h4>dummy product name</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend.
+                    Phasellus a felis at est bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere
+                    dolor non.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend.
+                    Phasellus a felis at est bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere
+                    dolor non.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend.
+                    Phasellus a felis at est bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere
+                    dolor non.
+                </p>
+            </div>
+            <div id="reviews" class="tab-content reviews">
+                <div class="customer-review">
+                    <h4>customer review</h4>
+                    <div class="box">
+                        <div class="image">
+                            <img src="images/single-product/image_07.jpg" alt="image_07">
+                        </div>
+                        <div class="text">
+                            <div>
+                                <div>
+                                    <h4>gerald barnes</h4>
+                                    <p class="date">27 Jun, 2021 at 2:30pm</p>
+                                </div>
+                                <div class="links">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                    <a href="#"><i class="fa-solid fa-reply"></i></a>
+                                </div>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit
+                                adipisci sint voluptates quo culpa at! Autem, ducimus repellendus alias eligendi amet
+                                ipsam culpa rerum veniam, doloribus quo, tenetur esse.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="images/single-product/image_07.jpg" alt="image_07">
+                        </div>
+                        <div class="text">
+                            <div>
+                                <div>
+                                    <h4>gerald barnes</h4>
+                                    <p class="date">27 Jun, 2021 at 2:30pm</p>
+                                </div>
+                                <div class="links">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                    <a href="#"><i class="fa-solid fa-reply"></i></a>
+                                </div>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit
+                                adipisci sint voluptates quo culpa at! Autem, ducimus repellendus alias eligendi amet
+                                ipsam culpa rerum veniam, doloribus quo, tenetur esse.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="leave-your-review">
+                    <h4>leave your review</h4>
+                    <p>Your Rating</p>
+                    <div class="rating">
+                        <div>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns=" http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                    height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 432 408">
+                                    <path fill="#c87065"
+                                        d="M427 157L310 258l35 150l-132-80l-132 80l35-150L0 157l153-13L213 3l60 141zM213 289l81 48l-22-91l71-62l-93-8l-37-86l-36 86l-93 8l70 62l-21 91z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your name here ...">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Your Subject ...">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="address" placeholder="Your Review Here"></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" data-text="Submit Review">Submit Review</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="information" class="tab-content information">
+                <h4>product information</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend.
+                    Phasellus a felis at est bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere
+                    dolor non.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend.
+                    Phasellus a felis at est bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere
+                    dolor non.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend.
+                    Phasellus a felis at est bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere
+                    dolor non.
+                </p>
+            </div>
+            <div id="tags" class="tab-content tags">
+                <h4>Tags</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend.
+                    Phasellus a felis at est bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere
+                    dolor non.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend.
+                    Phasellus a felis at est bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere
+                    dolor non.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend.
+                    Phasellus a felis at est bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere
+                    dolor non.
+                </p>
+            </div>
+            <div id="productVideo" class="tab-content productVideo">
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/BVya_sqQtCw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- End Product Tab -->
+    <!-- Start Related Product -->
+    <div class="related-product">
+        <div class="container">
+            <h4>Related Products</h4>
+            <div class="products">
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/related-product/image_01.jpg" alt="product_01">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Beautiful Chair</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                        <a href="index.html"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="index.html"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span></span>
+                        <span class="price">$50.50</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/related-product/image_02.jpg" alt="product_02">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Glass Table</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                        <a href="index.html"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="index.html"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span></span>
+                        <span class="price">$100.00</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/related-product/image_03.jpg" alt="product_03">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Egg Holder</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                        <a href="index.html"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="index.html"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span class="sale">Sale</span>
+                        <span class="price">
+                            <del>$120.00</del>
+                            $100.00
+                        </span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/related-product/image_04.jpg" alt="product_04">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Special Chair</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html"><i class="fa-solid fa-heart"></i></a>
+                        <a href="index.html"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="index.html"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span class="sale">Sale</span>
+                        <span class="price">
+                            <del>$66.66</del>
+                            $56.50
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Related Product -->
+    <!-- Start Footer -->
+    <footer>
+        <div class="container">
+            <div class="contact-us">
+                <h2>Contact Us</h2>
+                <div class="content">
+                    <p>Address: </p>
+                    <address>
+                        28 Green Tower, Street Name,<br>
+                        New York City, USA
+                    </address>
+                    <p>Call-Phone: </p>
+                    <a href="tel:+880 1234 123489">+880 1234 123489</a>
+                    <p>Email:</p>
+                    <a href="mailto:your-email@gmail.com">your-email@gmail.com</a>
+                </div>
+            </div>
+            <ul class="accounts">
+                <h2>accounts</h2>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Account</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Wishlist</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Cart</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Sign In</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Check out</a></li>
+            </ul>
+            <ul class="Shipping">
+                <h2>Shipping</h2>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>New Products</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Top Sellers</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Manufactirers </a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Suppliers</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Specials</a></li>
+            </ul>
+            <div class="email-newsletters">
+                <h2>Email Newsletters</h2>
+                <form action="#">
+                    <input type="text" name="email" placeholder="Email Address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Copyright And Payment -->
+    <div class="copyright-payment">
+        <div class="container">
+            <p class="copyright"> &#169; CodeCarnival 2021. All Rights Reserved.</p>
+            <div class="images-payment">
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_01.png" alt="image_01">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_02.png" alt="image_02">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_03.png" alt="image_03">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_04.png" alt="image_04">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="scroll-to-top" onclick="scrollTop()"><i class="fa-solid fa-angles-up"></i></a>
+    </div>
+    <!-- End Copyright And Payment -->
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+    <!-- Cdn Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <!-- Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+        integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script>
+        // Declaration Variables
+        var bars = document.querySelector('.bars-icon');
+        var plus = document.querySelector('.plus-icon');
+        var navbar = document.querySelector('.fixed-top');
+        var mylink = document.getElementById("scroll-to-top");
+
+
+        // change icon bars to X
+        bars.addEventListener('click', function () {
+            bars.classList.toggle('change-bars');
+        });
+
+
+        // change icon plus to minus
+        plus.addEventListener('click', function () {
+            plus.classList.toggle('change-plus');
+        });
+
+
+        // Open Aside bar
+        function openNav() {
+            document.getElementById("my-nav-menu").style.left = "0px";
+        };
+
+
+        // Close Aside bar
+        function closeNav() {
+            document.getElementById("my-nav-menu").style.left = "-225px";
+        };
+
+        // Scroll To Top when click on button and change color of header when scroll down
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mylink.style.display = "block";
+            } else {
+                mylink.style.display = "none";
+            }
+            if (window.scrollY > 100) {
+                navbar.classList.add('nav-active');
+            } else {
+                navbar.classList.remove('nav-active');
+            }
+        };
+
+
+        // When the user clicks on the button, scroll to the top of the document
+        function scrollTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+
+
+        // Fullscreen Overlay
+        function openOverlaySearch() {
+            document.getElementById("my-overlay-search").style.transform = "translateY(0%)";
+        };
+
+        function closeOverlaySearch() {
+            document.getElementById("my-overlay-search").style.transform = "translateY(-100%)";
+        };
+
+
+        // Slick Carousel
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            arrows: true,
+            centerMode: false,
+            responsive: [{
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }, ],
+            focusOnSelect: true,
+            prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
+            nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
+        });
+
+
+        // Tabs
+        function openCategory(event, categoryName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-links");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(categoryName).style.display = "block";
+            event.currentTarget.className += " active";
+        };
+        // Get the element with id = "defaultOpen"and click on it
+        document.getElementById("default-open").click();
+
+
+
+        // Slick carousel
+        $('.products').slick({
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            responsive: [{
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+            ]
+        });
+    </script>
+</body>
+
+</html>

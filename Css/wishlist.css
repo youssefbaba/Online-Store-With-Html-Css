@@ -75,22 +75,22 @@
 }
 
 /* End Breadcrumb  */
-/* Start Wishlist  */
-.wishlist {
+/* Start division  */
+.division {
     background-color: #f6f6f6;
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
 
 /* Start tabs */
-.wishlist .container .tabs {
+.division .container .tabs {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 30px;
 }
 
-.wishlist .container .tabs button {
+.division .container .tabs button {
     border: none;
     outline: none;
     background-color: var(--white-color);
@@ -105,26 +105,24 @@
     transition: 0.3s ease-in-out;
 }
 
-.wishlist .container .tabs button.active {
+.division .container .tabs button.active {
     background-color: var(--secondary-color);
     color: var(--white-color);
 }
 
 /* End tabs */
-
-
-/* First Tab Content */
-.wishlist .container .tab-content {
+/*  Start division */
+.division .container .tab-content {
     flex-direction: column;
     gap: 30px;
 }
 
-.wishlist .container .tab-content>div {
+.division .container .tab-content>div {
     background-color: var(--white-color);
     padding: 30px 15px;
 }
 
-.wishlist .container .tab-content h4 {
+.division .container .tab-content h4 {
     font-weight: 700;
     font-size: 16px;
     line-height: 28px;
@@ -133,26 +131,26 @@
     margin-bottom: 30px;
 }
 
-.wishlist .container .tab-content p {
+.division .container .tab-content p {
     font-weight: 400;
     font-size: 13px;
     line-height: 20px;
     color: var(--fourth-color);
 }
 
-.wishlist .container .shopping-cart p {
+.division .container .shopping-cart p {
     margin-bottom: 15px;
 }
 
-.wishlist .container form {
+.division .container form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.wishlist .container form input,
-.wishlist .container form select,
-.wishlist .container form textarea {
+.division .container form input,
+.division .container form select,
+.division .container form textarea {
     background-color: #f6f6f6;
     caret-color: var(--fourth-color);
     color: var(--fourth-color);
@@ -163,19 +161,19 @@
     font-size: 13px;
 }
 
-.wishlist .container form input,
-.wishlist .container form select {
+.division .container form input,
+.division .container form select {
     height: 40px;
     padding: 0 20px;
 }
 
-.wishlist .container form textarea {
+.division .container form textarea {
     height: 100px;
     padding: 15px 20px;
 }
 
-.wishlist .container form button,
-.wishlist .container .btn {
+.division .container form button,
+.division .container .btn {
     background-color: var(--third-color);
     color: var(--white-color);
     height: 35px;
@@ -192,8 +190,8 @@
     cursor: pointer;
 }
 
-.wishlist .container form button::before,
-.wishlist .container .btn::before {
+.division .container form button::before,
+.division .container .btn::before {
     position: absolute;
     top: 0;
     left: -100%;
@@ -204,56 +202,56 @@
     transition: var(--main-transition) ease-in-out;
 }
 
-.wishlist .container form button::before {
+.division .container form button::before {
     content: attr(data-text);
 }
 
-.wishlist .container .btn::before {
+.division .container .btn::before {
     content: "Place Order";
 }
 
-.wishlist .container form button:hover::before,
-.wishlist .container .btn:hover::before {
+.division .container form button:hover::before,
+.division .container .btn:hover::before {
     left: 0;
 }
 
-.wishlist .container table.first-type {
+.division .container table {
     width: 100%;
 }
 
-.wishlist .container table.first-type tr td {
+.division .container table.first-type tr td {
     font-weight: 700;
     font-size: 13px;
     line-height: 20px;
 }
 
-.wishlist .container table.first-type tbody tr td {
+.division .container table.first-type tbody tr td {
     padding: 7px 20px;
     color: var(--fourth-color);
     border-bottom: 1px solid #e5e5e5;
 }
 
-.wishlist .container table.first-type tr td:last-child,
-.wishlist .container table.first-type tr th:last-child {
+.division .container table.first-type tr td:last-child,
+.division .container table.first-type tr th:last-child {
     text-align: right;
 }
 
-.wishlist .container table.first-type tfoot tr td {
+.division .container table.first-type tfoot tr td {
     color: var(--third-color);
     padding: 15px 30px 0;
 }
 
-.wishlist .container .check-out,
-.wishlist .container .order-complete {
+.division .container .check-out,
+.division .container .order-complete {
     gap: 0;
 }
 
-.wishlist .container table.first-type thead {
+.division .container table thead {
     background-color: #f5f5f5;
     text-align: left;
 }
 
-.wishlist .container table.first-type thead tr th {
+.division .container table thead tr th {
     font-weight: 900;
     font-size: 13px;
     line-height: 20px;
@@ -262,7 +260,7 @@
     padding: 10px 30px;
 }
 
-.wishlist .container .accordion {
+.division .container .accordion {
     border: none;
     outline: none;
     background-color: #f6f6f6;
@@ -280,7 +278,7 @@
     padding: 0 20px;
 }
 
-.wishlist .container .panel {
+.division .container .panel {
     background-color: var(--white-color);
     max-height: 0;
     overflow: hidden;
@@ -288,32 +286,32 @@
     padding: 0px 30px;
 }
 
-.wishlist .container .accordion:after {
+.division .container .accordion:after {
     content: '\f0d7';
     font: var(--fa-font-solid);
 }
 
-.wishlist .container .active:after {
+.division .container .active:after {
     content: "\f0d8";
 }
 
-.wishlist .container .accordion,
-.wishlist .container .panel p,
-.wishlist .container .panel .image {
+.division .container .accordion,
+.division .container .panel p,
+.division .container .panel .image {
     margin-bottom: 15px;
 }
 
-.wishlist .container .panel .image {
+.division .container .panel .image {
     display: flex;
     gap: 10px;
 }
 
-.wishlist .container .tab-content .thank {
+.division .container .tab-content .thank {
     background-color: var(--white-color);
     margin-bottom: 30px;
 }
 
-.wishlist .container .tab-content .thank p {
+.division .container .tab-content .thank p {
     font-weight: 700;
     font-size: 16px;
     line-height: 26px;
@@ -322,21 +320,21 @@
     text-align: center;
 }
 
-.wishlist .container .tab-content .info {
+.division .container .tab-content .info {
     background-color: var(--white-color);
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
 
-.wishlist .container .tab-content .info>div {
+.division .container .tab-content .info>div {
     flex-basis: 50%;
     padding: 10px;
 }
 
-.wishlist .container .tab-content .info>div h4,
-.wishlist .container .tab-content .info>div p,
-.wishlist .container .tab-content .info>div a {
+.division .container .tab-content .info>div h4,
+.division .container .tab-content .info>div p,
+.division .container .tab-content .info>div a {
     display: block;
     font-weight: 700;
     font-size: 12px;
@@ -346,88 +344,260 @@
     text-align: center;
 }
 
-.wishlist .container .tab-content .info>div h4 {
+.division .container .tab-content .info>div h4 {
     margin: 0;
 }
 
-.wishlist .container .tab-content .info>div a {
+.division .container .tab-content .info>div a {
     transition: 0.3s ease-in-out;
 }
 
-.wishlist .container .tab-content .info>div a:hover {
+.division .container .tab-content .info>div a:hover {
+    color: var(--secondary-color);
+}
+
+.division .container .tab-content .overflow {
+    overflow-x: auto;
+}
+
+.division .container table.second-type thead tr th,
+.division .container table.second-type tbody tr td {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.division .container table.second-type thead tr th {
+    padding: 10px;
+}
+
+.division .container table.second-type tbody tr td {
+    padding: 20px 10px 0;
+}
+
+.division .container table.second-type thead tr .product-name,
+.division .container table.second-type tbody tr .product-name {
+    width: 270px;
+}
+
+.division .container table.second-type tbody tr .product-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+}
+
+.division .container table.second-type tbody tr .product-name .image img {
+    width: 100%;
+}
+
+.division .container table.second-type tbody tr .product-name h4 {
+    margin: 0;
+}
+
+.division .container table.second-type tbody tr .product-name h4 a {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--color-dark);
+    transition: 0.3s ease-in-out;
+}
+
+.division .container table.second-type tbody tr .product-name p {
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.division .container table.second-type tbody tr .product-name h4:hover a {
+    color: var(--secondary-color);
+}
+
+.division .container table.second-type tbody tr .product-price,
+.division .container table.second-type tbody tr .product-stock,
+.division .container table.second-type tbody tr .product-total {
+    font-weight: 900;
+    color: var(--fourth-color);
+}
+
+.division .container table.second-type tbody tr .product-total {
+    color: var(--color-dark);
+}
+
+.division .container table.second-type tbody tr .product-price,
+.division .container table.second-type tbody tr .product-total {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.division .container table.second-type tbody tr .product-stock {
+    font-size: 13px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.division .container table.second-type tbody tr .product-add-cart a i {
+    transition: 0.3s ease-in-out;
+}
+
+.division .container table.second-type tbody tr .product-add-cart a:hover i {
+    color: var(--secondary-color);
+}
+
+.division .container table.second-type tbody tr i {
+    color: var(--color-dark);
+    font-size: 20px;
+}
+
+.division .container table.second-type tbody tr .product-remove a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease-in-out;
+    margin: 0 auto;
+}
+
+.division .container table.second-type tbody tr .product-remove a:hover {
+    background-color: var(--secondary-color);
+}
+
+.division .container table.second-type tbody tr .product-remove a i {
+    transition: color 0.3s ease-in-out 0.2s;
+}
+
+.division .container table.second-type tbody tr .product-remove a:hover i {
+    color: var(--white-color);
+}
+
+.division .container table.second-type tbody tr .product-quantity button,
+.division .container table.second-type tbody tr .product-quantity span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #f5f5f5;
+    color: var(--fourth-color);
+    transition: 0.3s ease-in-out;
+}
+
+.division .container table.second-type tbody tr .product-quantity button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.division .container table.second-type tbody tr .product-quantity span {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.division .container table.second-type tbody tr .product-quantity span,
+.division .container table.second-type tbody tr .product-quantity button:first-of-type {
+    margin-right: 5px;
+}
+
+.division .container table.second-type tbody tr .product-quantity button i {
+    font-size: 16px;
+    color: var(--fourth-color);
+    transition: 0.3s ease-in-out;
+}
+
+.division .container table.second-type tbody tr .product-quantity button:hover i {
     color: var(--secondary-color);
 }
 
 @media (min-width: 768px) {
-    .wishlist {
+    .division {
         padding-top: calc(var(--section-padding) * 2);
         padding-bottom: calc(var(--section-padding) * 2);
         margin-top: 100px;
     }
 
-    .wishlist .container .tabs {
+    .division .container .tabs {
         flex-direction: row;
         gap: 30px;
     }
 
-    .wishlist .container .tabs button,
-    .wishlist .container .tab-content .info>div {
+    .division .container .tabs button,
+    .division .container .tab-content .info>div {
         flex-basis: 25%;
     }
 
-    .wishlist .container .tab-content {
+    .division .container .tab-content {
         flex-direction: row;
         flex-wrap: wrap;
     }
 
-    .wishlist .container .shopping-cart>table,
-    .wishlist .container .shopping-cart .culculate-shipping,
-    .wishlist .container .order-complete .thank,
-    .wishlist .container .order-complete .info {
+    .division .container .shopping-cart>table,
+    .division .container .shopping-cart .culculate-shipping,
+    .division .container .order-complete .thank,
+    .division .container .order-complete .info {
         flex-basis: 100%;
     }
 
-    .wishlist .container .shopping-cart .coupon-discount,
-    .wishlist .container .shopping-cart .payment-details {
+    .division .container .shopping-cart .coupon-discount,
+    .division .container .shopping-cart .payment-details {
         flex-basis: calc((100% - 30px) / 2);
     }
 
-    .wishlist .container .check-out>div,
-    .wishlist .container .order-complete .our-order,
-    .wishlist .container .order-complete .payment-method {
+    .division .container .check-out>div,
+    .division .container .order-complete .our-order,
+    .division .container .order-complete .payment-method {
         flex-basis: 50%;
     }
 
-    .wishlist .container .tab-content>div {
+    .division .container .tab-content>div {
         padding: 30px;
     }
 
-    .wishlist .container table.first-type tbody tr td {
+    .division .container table.first-type tbody tr td {
         padding: 7px 30px;
     }
 
-    .wishlist .container .culculate-shipping form {
+    .division .container .culculate-shipping form {
         flex-direction: row;
         flex-wrap: wrap;
     }
 
-    .wishlist .container .tab-content .culculate-shipping form .form-group {
+    .division .container .tab-content .culculate-shipping form .form-group {
         flex-basis: calc((100% - 45px) / 3);
     }
 
-    .wishlist .container .tab-content .info>div h4 {
+    .division .container .tab-content .info>div h4 {
         font-size: 16px;
         line-height: 28px;
     }
 
-    .wishlist .container .tab-content .info>div p,
-    .wishlist .container .tab-content .info>div a {
+    .division .container .tab-content .info>div p,
+    .division .container .tab-content .info>div a {
         font-size: 13px;
     }
 
+    .division .container .tab-content .overflow {
+        flex-basis: 100%;
+    }
+
+    .division .container table.second-type thead tr th:first-child,
+    .division .container table.second-type tbody tr td:first-child {
+        width: 330px;
+    }
+
+    .division .container table.second-type tbody tr .product-name {
+        gap: 20px;
+    }
+
+    .division .container table.second-type tbody tr .image {
+        flex-basis: 35%;
+    }
+
+    .division .container table.second-type tbody tr .product-name h4 a {
+        font-size: 14px;
+        line-height: 18px;
+    }
 }
 
-/* End Wishlist  */
+/* End division  */
 /* Start Footer */
 footer {
     background-color: #eeeeee;

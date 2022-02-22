@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist Page</title>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="Css/style.css">
+    <!-- Special Stylesheet -->
+    <link rel="stylesheet" href="Css/wishlist.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="Css/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header>
+        <ul class="logo-cart fixed-top">
+            <li class="logo">
+                <a href="index.html">
+                    <img src="images/header/Logo.png" alt="Logo">
+                </a>
+            </li>
+            <li class="cart">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping" data-number="2"></i>
+                </a>
+                <div class="hover">
+                    <p>You have<span>03 items</span>in your shopping bag</p>
+                    <div class="product product-one">
+                        <div class="image">
+                            <a href="single-product.html"><img src="images/cart/cart_01.jpg" alt="cart_01"></a>
+                        </div>
+                        <div class="description">
+                            <a href="single-product.html">
+                                <h4>Small Stool</h4>
+                            </a>
+                            <p>Price : <span>$</span> <span>300.00</span></p>
+                            <p>Qt : <span>02</span></p>
+                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="product product-two">
+                        <div class="image">
+                            <a href="single-product.html"><img src="images/cart/cart_02.jpg" alt="cart_02"></a>
+                        </div>
+                        <div class="description">
+                            <a href="single-product.html">
+                                <h4>Walnut Stand</h4>
+                            </a>
+                            <p>Price : <span>£</span> <span>200.00</span></p>
+                            <p>Qt : <span>01</span></p>
+                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="total">
+                        <h4>Total</h4>
+                        <h4><span>$</span> <span> 500.00</span></h4>
+                    </div>
+                    <div class="links">
+                        <a href="cart.html" data-text="view cart">View cart</a>
+                        <a href="checkout.html" data-text="check out">Check out</a>
+                    </div>
+                </div>
+            </li>
+            <li class="bars" onclick="openNav()"><i class="fa-solid fa-bars"></i></li>
+            <li class="nav-menu" id="my-nav-menu">
+                <i class="fa-solid fa-xmark close" onclick="closeNav()"></i>
+                <ul>
+                    <li><a href="index.html" data-text="Home">Home</a></li>
+                    <li><a href="shop.html" data-text="Products">Products</a></li>
+                    <li><a href="shop-sidebar.html" data-text="Accesories">Accesories</a></li>
+                    <li><a href="shop-list.html" data-text="Lookbook">Lookbook</a></li>
+                    <li><a href="blog.html" data-text="Blog">Blog</a></li>
+                    <li class="pages">
+                        <a href="index.html" data-text="Pages">Pages</a>
+                        <div class="sub-nav-menu">
+                            <ul>
+                                <li class="sub-nav-menu-title">Page's</li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                                <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
+                                <li><a href="shop-list.html">Shop List</a></li>
+                                <li><a href="shop-list-right-sidebar.html">Shop List right sidebar</a></li>
+                                <li><a href="single-product.html">Single Product</a></li>
+                                <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
+                                <li><a href="cart.html">Shopping Cart</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="order.html">Order</a></li>
+                                <li><a href="login.html">login / Registration</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="single-blog.html">Single Blog</a></li>
+                                <li><a href="single-blog-sidebar.html">Single Blog Sidebar</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="about.html" data-text="About us">About us</a></li>
+                    <li><a href="contact.html" data-text="Contact">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu">
+            <div>Menu</div>
+            <input type="checkbox" class="toggle-Sidebar" id="toggle-Sidebar">
+            <label class="bars-icon" for="toggle-Sidebar">
+                <div class="bar top"></div>
+                <div class="bar center"></div>
+                <div class="bar bottom"></div>
+            </label>
+            <nav class="navigation" id="my-navigation">
+                <ul>
+                    <li class="home"><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Products</a></li>
+                    <li><a href="shop-sidebar.html">Accesories</a></li>
+                    <li><a href="shop-list.html">Lookbook</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li class="pages">
+                        <a href="index.html">
+                            <span>pages</span>
+                            <label class="plus-icon" for="toggle-plus"></label>
+                        </a>
+                        <input type="checkbox" id="toggle-plus" class="toggle-plus">
+                        <ul class="sub-menu">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                            <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
+                            <li><a href="shop-list.html">Shop List</a></li>
+                            <li><a href="shop-list-right-sidebar.html">Shop List right sidebar</a></li>
+                            <li><a href="single-product.html">Single Product</a></li>
+                            <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
+                            <li><a href="cart.html">Shopping Cart</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="order.html">Order</a></li>
+                            <li><a href="login.html">login / Registration</a></li>
+                            <li><a href="my-account.html">My Account</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="single-blog.html">Single Blog</a></li>
+                            <li><a href="single-blog-sidebar.html">Single Blog Sidebar</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <h2>Order Complete</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Order Complete</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+    <!-- Start Order -->
+    <div class="division">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-links" onclick="openWishlist(event, 'shopping-cart')">shopping-cart</button>
+                <button class="tab-links" onclick="openWishlist(event, 'wishlist')">wishlist</button>
+                <button class="tab-links" onclick="openWishlist(event, 'check-out')">check-out</button>
+                <button class="tab-links" onclick="openWishlist(event, 'order-complete')"
+                    id="default-open">order-complete</button>
+            </div>
+            <div id="shopping-cart" class="tab-content shopping-cart">
+                <div class="overflow">
+                    <table class="second-type">
+                        <thead>
+                            <tr>
+                                <th class="product-name">product</th>
+                                <th class="product-price">price</th>
+                                <th class="product-quantity">quantity</th>
+                                <th class="product-total">total</th>
+                                <th class="product-remove">remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_01.jpg" alt="image_01">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">small stool</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-quantity">
+                                    <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="number">1</span>
+                                    <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                                </td>
+                                <td class="product-total">
+                                    $112:00
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_02.jpg" alt="image_02">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">glass table</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-quantity">
+                                    <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="number">1</span>
+                                    <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                                </td>
+                                <td class="product-total">
+                                    $112:00
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_03.jpg" alt="image_03">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">walnut stand</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-quantity">
+                                    <button class="minus"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="number">1</span>
+                                    <button class="plus"><i class="fa-solid fa-plus"></i></button>
+                                </td>
+                                <td class="product-total">
+                                    $112:00
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="coupon-discount">
+                    <h4>coupon discount</h4>
+                    <p>Enter your coupon code if you have one!</p>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" name="coupon" placeholder="Enter Your Code Here ...">
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" data-text="apply coupon">apply coupon</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="payment-details">
+                    <h4>payment details</h4>
+                    <table class="first-type">
+                        <tbody>
+                            <tr>
+                                <td>Cart Subtotal</td>
+                                <td>$155.00</td>
+                            </tr>
+                            <tr>
+                                <td>Cart Subtotal</td>
+                                <td>$15.00</td>
+                            </tr>
+                            <tr>
+                                <td>Vat</td>
+                                <td>$00.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Order Total</td>
+                                <td>$170.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="culculate-shipping">
+                    <h4>culculate shipping</h4>
+                    <p>Enter your coupon code if you have one!</p>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" name="country" placeholder="Country">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="state" placeholder="Region/State">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="post-code" placeholder="Post Code">
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" data-text="get a quote">get a quote</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="wishlist" class="tab-content wishlist-child">
+                <div class="overflow">
+                    <table class="second-type">
+                        <thead>
+                            <tr>
+                                <th class="product-name">product</th>
+                                <th class="product-price">price</th>
+                                <th class="product-stock">stock Status</th>
+                                <th class="product-add-cart">add to cart</th>
+                                <th class="product-remove">remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_01.jpg" alt="image_01">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">small stool</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-stock">
+                                    En Stock
+                                </td>
+                                <td class="product-add-cart">
+                                    <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_02.jpg" alt="image_02">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">glass table</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-stock">
+                                    En Stock
+                                </td>
+                                <td class="product-add-cart">
+                                    <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="product-name">
+                                    <div class="image">
+                                        <img src="images/wishlist/image_03.jpg" alt="image_03">
+                                    </div>
+                                    <div class="text">
+                                        <h4><a href="single-product.html">walnut stand</a></h4>
+                                        <p>Color : <span>Black</span></p>
+                                        <p>Size : <span>Sl</span></p>
+                                    </div>
+                                </td>
+                                <td class="product-price">
+                                    $56:00
+                                </td>
+                                <td class="product-stock">
+                                    En Stock
+                                </td>
+                                <td class="product-add-cart">
+                                    <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                                </td>
+                                <td class="product-remove">
+                                    <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="check-out" class="tab-content check-out">
+                <div class="billing-details">
+                    <h4>billing details</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your name here ...">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email address here ...">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone here ...">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="company" placeholder="Company name here ...">
+                        </div>
+                        <div class="form-group">
+                            <select name="Country">
+                                <option value="" selected disabled hidden>Country</option>
+                                <option value="Country_01">Country_01</option>
+                                <option value="Country_02">Country_02</option>
+                                <option value="Country_03">Country_03</option>
+                                <option value="Country_04">Country_04</option>
+                                <option value="Country_05">Country_05</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="State">
+                                <option value="" selected disabled hidden>State</option>
+                                <option value="State_01">State_01</option>
+                                <option value="State_02">State_02</option>
+                                <option value="State_03">State_03</option>
+                                <option value="State_04">State_04</option>
+                                <option value="Satte_05">Satte_05</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="City">
+                                <option value="" selected disabled hidden>City</option>
+                                <option value="City_01">City_01</option>
+                                <option value="City_02">City_02</option>
+                                <option value="City_03">City_03</option>
+                                <option value="City_04">City_04</option>
+                                <option value="City_05">City_05</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="address" placeholder="Your Address Here"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="ship-to-different-address">
+                    <h4>ship to different address</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your name here ...">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email address here ...">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone here ...">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="company" placeholder="Company name here ...">
+                        </div>
+                        <div class="form-group">
+                            <select name="Country">
+                                <option value="" selected disabled hidden>Country</option>
+                                <option value="Country_01">Country_01</option>
+                                <option value="Country_02">Country_02</option>
+                                <option value="Country_03">Country_03</option>
+                                <option value="Country_04">Country_04</option>
+                                <option value="Country_05">Country_05</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="State">
+                                <option value="" selected disabled hidden>State</option>
+                                <option value="State_01">State_01</option>
+                                <option value="State_02">State_02</option>
+                                <option value="State_03">State_03</option>
+                                <option value="State_04">State_04</option>
+                                <option value="Satte_05">Satte_05</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select name="City">
+                                <option value="" selected disabled hidden>City</option>
+                                <option value="City_01">City_01</option>
+                                <option value="City_02">City_02</option>
+                                <option value="City_03">City_03</option>
+                                <option value="City_04">City_04</option>
+                                <option value="City_05">City_05</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="address" placeholder="Your Address Here"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="our-order">
+                    <h4>Our order</h4>
+                    <table class="first-type">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dummy Product Name x 2</td>
+                                <td>$86.00</td>
+                            </tr>
+                            <tr>
+                                <td>Dummy Product Name x 1</td>
+                                <td>$69.00</td>
+                            </tr>
+                            <tr>
+                                <td>Cart Subtotal</td>
+                                <td>$155.00</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping and Handing</td>
+                                <td>$15.00</td>
+                            </tr>
+                            <tr>
+                                <td>Vat</td>
+                                <td>$00.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Order Total</td>
+                                <td>$170.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="payment-method">
+                    <h4>payment method</h4>
+                    <button class="accordion">
+                        <span>Direct bank transfer</span>
+                    </button>
+                    <div class="panel">
+                        <p>
+                            Make your payment directly into our bank account. Please use your Order ID as the
+                            payment
+                            reference. Your order won't be shipped until the funds have cleared in our account.
+                        </p>
+                    </div>
+                    <button class="accordion">
+                        <span> Cheque payment</span>
+                    </button>
+                    <div class="panel">
+                        <p>
+                            Please send your cheque to Store Name, Store Street, Store Town, Store State / County,
+                            Store
+                            Postcode.
+                        </p>
+                    </div>
+                    <button class="accordion">
+                        <span>Paypal</span>
+                    </button>
+                    <div class="panel">
+                        <p>
+                            Pay via PayPal; you can pay with your credit card if you don't have a PayPal account.
+                        </p>
+                        <div class="image">
+                            <a href="#">
+                                <img src="images/payment/image_01.png" alt="image_01">
+                            </a>
+                            <a href="#">
+                                <img src="images/payment/image_02.png" alt="image_02">
+                            </a>
+                            <a href="#">
+                                <img src="images/payment/image_03.png" alt="image_03">
+                            </a>
+                            <a href="#">
+                                <img src="images/payment/image_04.png" alt="image_04">
+                            </a>
+                        </div>
+                    </div>
+                    <button class="btn">Place Order</button>
+                </div>
+            </div>
+            <div id="order-complete" class="tab-content order-complete">
+                <div class="thank">
+                    <p>Thank you. Your order has been received.</p>
+                </div>
+                <div class="info">
+                    <div>
+                        <h4>order no</h4>
+                        <p>M 2653257</p>
+                    </div>
+                    <div>
+                        <h4>date</h4>
+                        <p>JUNE 15, 2021</p>
+                    </div>
+                    <div>
+                        <h4>Total</h4>
+                        <p>$ 170.00</p>
+                    </div>
+                    <div>
+                        <h4>payment method</h4>
+                        <a href="#">check payment</a>
+                    </div>
+                </div>
+                <div class="our-order">
+                    <h4>Our order</h4>
+                    <table class="first-type">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dummy Product Name x 2</td>
+                                <td>$86.00</td>
+                            </tr>
+                            <tr>
+                                <td>Dummy Product Name x 1</td>
+                                <td>$69.00</td>
+                            </tr>
+                            <tr>
+                                <td>Cart Subtotal</td>
+                                <td>$155.00</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping and Handing</td>
+                                <td>$15.00</td>
+                            </tr>
+                            <tr>
+                                <td>Vat</td>
+                                <td>$00.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>Order Total</td>
+                                <td>$170.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="payment-method">
+                    <h4>payment method</h4>
+                    <button class="accordion">
+                        <span>Direct bank transfer</span>
+                    </button>
+                    <div class="panel">
+                        <p>
+                            Make your payment directly into our bank account. Please use your Order ID as the
+                            payment
+                            reference. Your order won't be shipped until the funds have cleared in our account.
+                        </p>
+                    </div>
+                    <button class="accordion">
+                        <span> Cheque payment</span>
+                    </button>
+                    <div class="panel">
+                        <p>
+                            Please send your cheque to Store Name, Store Street, Store Town, Store State / County,
+                            Store
+                            Postcode.
+                        </p>
+                    </div>
+                    <button class="accordion">
+                        <span>Paypal</span>
+                    </button>
+                    <div class="panel">
+                        <p>
+                            Pay via PayPal; you can pay with your credit card if you don't have a PayPal account.
+                        </p>
+                        <div class="image">
+                            <a href="#">
+                                <img src="images/payment/image_01.png" alt="image_01">
+                            </a>
+                            <a href="#">
+                                <img src="images/payment/image_02.png" alt="image_02">
+                            </a>
+                            <a href="#">
+                                <img src="images/payment/image_03.png" alt="image_03">
+                            </a>
+                            <a href="#">
+                                <img src="images/payment/image_04.png" alt="image_04">
+                            </a>
+                        </div>
+                    </div>
+                    <button class="btn">Place Order</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Start Order -->
+    <!-- Start Footer -->
+    <footer>
+        <div class="container">
+            <div class="contact-us">
+                <h2>Contact Us</h2>
+                <div class="content">
+                    <p>Address: </p>
+                    <address>
+                        28 Green Tower, Street Name,<br>
+                        New York City, USA
+                    </address>
+                    <p>Call-Phone: </p>
+                    <a href="tel:+880 1234 123489">+880 1234 123489</a>
+                    <p>Email:</p>
+                    <a href="mailto:your-email@gmail.com">your-email@gmail.com</a>
+                </div>
+            </div>
+            <ul class="accounts">
+                <h2>accounts</h2>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Account</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Wishlist</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Cart</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Sign In</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Check out</a></li>
+            </ul>
+            <ul class="Shipping">
+                <h2>Shipping</h2>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>New Products</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Top Sellers</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Manufactirers </a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Suppliers</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Specials</a></li>
+            </ul>
+            <div class="email-newsletters">
+                <h2>Email Newsletters</h2>
+                <form action="">
+                    <input type="text" name="email" placeholder="Email Address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Copyright And Payment -->
+    <div class="copyright-payment">
+        <div class="container">
+            <p class="copyright"> &#169; CodeCarnival 2021. All Rights Reserved.</p>
+            <div class="images-payment">
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_01.png" alt="image_01">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_02.png" alt="image_02">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_03.png" alt="image_03">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_04.png" alt="image_04">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="scroll-to-top" onclick="scrollTop()"><i class="fa-solid fa-angles-up"></i></a>
+    </div>
+    <!-- End Copyright And Payment -->
+
+    <script>
+        // Declaration Variables
+        var bars = document.querySelector('.bars-icon');
+        var plus = document.querySelector('.plus-icon');
+        var navbar = document.querySelector('.fixed-top');
+        var mylink = document.getElementById("scroll-to-top");
+
+
+        // change icon bars to X
+        bars.addEventListener('click', function () {
+            bars.classList.toggle('change-bars');
+        })
+
+
+        // change icon plus to minus
+        plus.addEventListener('click', function () {
+            plus.classList.toggle('change-plus');
+        })
+
+
+        // Open Aside bar
+        function openNav() {
+            document.getElementById("my-nav-menu").style.left = "0px";
+        }
+
+
+        // Close Aside bar
+        function closeNav() {
+            document.getElementById("my-nav-menu").style.left = "-225px";
+        }
+
+        // Scroll To Top when click on button and change color of header when scroll down
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mylink.style.display = "block";
+            } else {
+                mylink.style.display = "none";
+            }
+            if (window.scrollY > 100) {
+                navbar.classList.add('nav-active');
+            } else {
+                navbar.classList.remove('nav-active');
+            }
+        }
+
+
+        // When the user clicks on the button, scroll to the top of the document
+        function scrollTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+        // Fullscreen Overlay
+        function openOverlaySearch() {
+            document.getElementById("my-overlay-search").style.transform = "translateY(0%)";
+        }
+
+        function closeOverlaySearch() {
+            document.getElementById("my-overlay-search").style.transform = "translateY(-100%)";
+        }
+
+
+
+        // Tabs
+        function openWishlist(event, wishlistName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-links");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(wishlistName).style.display = "flex";
+            event.currentTarget.className += " active";
+        }
+        // Get the element with id = "defaultOpen"and click on it 
+        document.getElementById("default-open").click();
+
+        // Accordion
+        var accordion = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    var parent = this.parentElement;
+                    parent.style.maxHeight = parseInt(parent.style.maxHeight) + panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
