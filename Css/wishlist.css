@@ -443,8 +443,8 @@
 }
 
 .division .container table.second-type tbody tr i {
-    color: var(--color-dark);
-    font-size: 20px;
+    font-size: 16px;
+    color: var(--fourth-color);
 }
 
 .division .container table.second-type tbody tr .product-remove a {
@@ -498,8 +498,6 @@
 }
 
 .division .container table.second-type tbody tr .product-quantity button i {
-    font-size: 16px;
-    color: var(--fourth-color);
     transition: 0.3s ease-in-out;
 }
 

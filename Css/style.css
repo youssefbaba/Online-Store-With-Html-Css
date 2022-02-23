@@ -1228,7 +1228,8 @@ header .menu .navigation>ul>li .change-plus::after {
 
 .featured-product .container .products .product .image-product {
     position: relative;
-    overflow: hidden;
+    overflow-y: hidden;
+    /* overflow-x: none; */
 }
 
 .featured-product .container .products .product .image-product img {
@@ -1241,6 +1242,7 @@ header .menu .navigation>ul>li .change-plus::after {
     padding: 10px 0;
     position: absolute;
     bottom: -35px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--white-color);
@@ -1255,9 +1257,48 @@ header .menu .navigation>ul>li .change-plus::after {
     opacity: 1;
 }
 
-.featured-product .container .products .product .image-product .product-icons a {
+.product-icons a {
     width: calc(100% / 4);
     text-align: center;
+    position: relative;
+}
+
+.product-icons a::before,
+.product-icons a::after {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.product-icons a::before {
+    content: attr(data-text);
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-transform: uppercase;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 10px;
+    white-space: nowrap;
+    padding: 5px 10px;
+    border-radius: 5px;
+    top: -20px;
+}
+
+.product-icons a::after {
+    content: "";
+    border: 6px solid;
+    border-color: var(--secondary-color) transparent transparent transparent;
+    top: -8px;
+}
+
+a:hover::before,
+a:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 .featured-product .container .products .product .image-product .product-icons a:not(:last-child) {
@@ -1352,7 +1393,7 @@ header .menu .navigation>ul>li .change-plus::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 3;
+    z-index: 2;
 }
 
 .slick-prev:hover,
@@ -1363,11 +1404,11 @@ header .menu .navigation>ul>li .change-plus::after {
 }
 
 .slick-prev {
-    left: 5px;
+    left: -15px;
 }
 
 .slick-next {
-    right: 5px;
+    right: -15px;
 }
 
 @media (min-width:768px) {
@@ -1690,11 +1731,6 @@ header .menu .navigation>ul>li .change-plus::after {
     bottom: 15px;
     visibility: visible;
     opacity: 1;
-}
-
-.purchase-online-on-hurst .container .tab-content .products-online .product .image-product .product-icons a {
-    width: calc(100% / 4);
-    text-align: center;
 }
 
 .purchase-online-on-hurst .container .tab-content .products-online .product .image-product .product-icons a:not(:last-child) {

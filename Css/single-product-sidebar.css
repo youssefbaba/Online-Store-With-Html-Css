@@ -1,0 +1,253 @@
+/*  Start Sidebar  */
+main .container aside {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main .container aside form {
+    background-color: var(--white-color);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+main .container aside form input {
+    flex-basis: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 13px;
+    caret-color: var(--fourth-color);
+    color: var(--fourth-color);
+}
+
+main .container aside form button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+main .container aside form button i {
+    color: var(--fourth-color);
+    font-size: 20px;
+    transition: var(--main-transition) ease-in-out;
+}
+
+main .container aside form button:hover i,
+main .container aside form button:focus i {
+    color: var(--secondary-color);
+}
+
+main .container aside .categories .scroll {
+    height: 290px;
+    overflow: hidden;
+}
+
+main .container aside .categories .scroll:hover {
+    overflow-y: auto;
+}
+
+/* For Chrome , Safari , Edge  */
+main .container aside .categories .scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+main .container aside .categories .scroll::-webkit-scrollbar-thumb {
+    background-color: var(--third-color);
+}
+
+/* For Firefox */
+main .container aside .categories .scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--third-color) var(--white-color);
+}
+
+main .container aside .categories {
+    background-color: var(--white-color);
+    padding: 30px 15px;
+}
+
+main .container aside h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--fifth-color);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+main .container aside .categories>ul {
+    padding-left: 20px;
+}
+
+main .container aside .categories>ul>li.accordion span {
+    color: var(--color-dark);
+    display: block;
+    font-size: 14px;
+    line-height: 25px;
+    cursor: pointer;
+    transition: var(--main-transition) ease-in-out;
+}
+
+main .container aside .categories>ul>li.accordion+.panel a {
+    color: var(--fourth-color);
+    display: block;
+    font-size: 13px;
+    line-height: 25px;
+    transition: var(--main-transition) ease-in-out;
+}
+
+main .container aside .categories>ul li.active span,
+main .container aside .categories>ul li.accordion:hover span,
+main .container aside .categories>ul li.accordion+.panel li:hover a {
+    color: var(--secondary-color);
+}
+
+main .container aside .categories>ul li+.panel {
+    padding-left: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+main .container aside .recent-products {
+    background-color: var(--white-color);
+    padding: 30px 15px;
+}
+
+main .container aside .recent-products .box {
+    display: flex;
+    gap: 20px;
+}
+
+main .container aside .recent-products .box:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+main .container aside .recent-products .box .image a {
+    display: block;
+}
+
+main .container aside .recent-products .box .image a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+main .container aside .recent-products .box .text h4 {
+    font-family: 'Bree Serif', serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+main .container aside .recent-products .box .text h4 a {
+    color: var(--fifth-color);
+    transition: 0.3s ease-in-out;
+
+}
+
+main .container aside .recent-products .box .text h4:hover a {
+    color: var(--secondary-color);
+}
+
+main .container aside .recent-products .box .text span {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--fourth-color);
+}
+
+main .container aside .best-brand {
+    background-color: var(--white-color);
+    padding: 30px 15px;
+}
+
+main .container aside .best-brand a {
+    display: block;
+    position: relative;
+}
+
+main .container aside .best-brand a img {
+    max-width: 100%;
+}
+
+main .container aside .best-brand a::before,
+main .container aside .best-brand a::after {
+    position: absolute;
+    background-color: #fd5954;
+    color: var(--fourth-color);
+    font-weight: 900;
+    font-size: 25px;
+    left: 0;
+    width: fit-content;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 20px;
+}
+
+main .container aside .best-brand a::before {
+    content: "BEST";
+    top: 10px;
+}
+
+main .container aside .best-brand a::after {
+    content: "BRAND";
+    top: 40px;
+}
+
+@media (min-width:768px) {
+    main .container aside {
+        margin-top: 30px;
+    }
+
+    main .container aside .recent-products .box .text h4 {
+        font-size: 15px;
+    }
+
+    main .container aside .recent-products .box .text span {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+    main .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main .container .main-content {
+        width: calc((100% - 30px) * 0.76);
+    }
+
+    main .container aside {
+        width: calc((100% - 30px) * 0.24);
+        margin-top: 0;
+    }
+
+    main .container aside .recent-products .box .text h4 {
+        font-size: 13px;
+    }
+
+    main .container aside .recent-products .box .image {
+        flex-basis: 34%;
+    }
+
+}
+
+@media (min-width:1200px) {
+    main .container aside .recent-products .box .text h4 {
+        font-size: 14px;
+    }
+}
+
+/*  End Sidebar  */
