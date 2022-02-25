@@ -47,26 +47,6 @@ main .container aside form button:focus i {
 
 main .container aside .categories .scroll {
     height: 290px;
-    overflow: hidden;
-}
-
-main .container aside .categories .scroll:hover {
-    overflow-y: auto;
-}
-
-/* For Chrome , Safari , Edge  */
-main .container aside .categories .scroll::-webkit-scrollbar {
-    width: 5px;
-}
-
-main .container aside .categories .scroll::-webkit-scrollbar-thumb {
-    background-color: var(--third-color);
-}
-
-/* For Firefox */
-main .container aside .categories .scroll {
-    scrollbar-width: thin;
-    scrollbar-color: var(--third-color) var(--white-color);
 }
 
 main .container aside .categories {

@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Page</title>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="Css/style.css">
+    <!-- Special Stylesheet -->
+    <link rel="stylesheet" href="Css/shop.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="Css/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header>
+        <ul class="logo-cart fixed-top">
+            <li class="logo">
+                <a href="index.html">
+                    <img src="images/header/Logo.png" alt="Logo">
+                </a>
+            </li>
+            <li class="cart">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping" data-number="2"></i>
+                </a>
+                <div class="hover">
+                    <p>You have<span>03 items</span>in your shopping bag</p>
+                    <div class="product product-one">
+                        <div class="image">
+                            <a href="single-product.html"><img src="images/cart/cart_01.jpg" alt="cart_01"></a>
+                        </div>
+                        <div class="description">
+                            <a href="single-product.html">
+                                <h4>Small Stool</h4>
+                            </a>
+                            <p>Price : <span>$</span> <span>300.00</span></p>
+                            <p>Qt : <span>02</span></p>
+                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="product product-two">
+                        <div class="image">
+                            <a href="single-product.html"><img src="images/cart/cart_02.jpg" alt="cart_02"></a>
+                        </div>
+                        <div class="description">
+                            <a href="single-product.html">
+                                <h4>Walnut Stand</h4>
+                            </a>
+                            <p>Price : <span>£</span> <span>200.00</span></p>
+                            <p>Qt : <span>01</span></p>
+                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="total">
+                        <h4>Total</h4>
+                        <h4><span>$</span> <span> 500.00</span></h4>
+                    </div>
+                    <div class="links">
+                        <a href="cart.html" data-text="view cart">View cart</a>
+                        <a href="checkout.html" data-text="check out">Check out</a>
+                    </div>
+                </div>
+            </li>
+            <li class="bars" onclick="openNav()"><i class="fa-solid fa-bars"></i></li>
+            <li class="nav-menu" id="my-nav-menu">
+                <i class="fa-solid fa-xmark close" onclick="closeNav()"></i>
+                <ul>
+                    <li><a href="index.html" data-text="Home">Home</a></li>
+                    <li><a href="shop.html" data-text="Products">Products</a></li>
+                    <li><a href="shop-sidebar.html" data-text="Accesories">Accesories</a></li>
+                    <li><a href="shop-list.html" data-text="Lookbook">Lookbook</a></li>
+                    <li><a href="blog.html" data-text="Blog">Blog</a></li>
+                    <li class="pages">
+                        <a href="index.html" data-text="Pages">Pages</a>
+                        <div class="sub-nav-menu">
+                            <ul>
+                                <li class="sub-nav-menu-title">Page's</li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                                <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
+                                <li><a href="shop-list.html">Shop List</a></li>
+                                <li><a href="shop-list-right-sidebar.html">Shop List right sidebar</a></li>
+                                <li><a href="single-product.html">Single Product</a></li>
+                                <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
+                                <li><a href="cart.html">Shopping Cart</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="order.html">Order</a></li>
+                                <li><a href="login.html">login / Registration</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="single-blog.html">Single Blog</a></li>
+                                <li><a href="single-blog-sidebar.html">Single Blog Sidebar</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="about.html" data-text="About us">About us</a></li>
+                    <li><a href="contact.html" data-text="Contact">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu">
+            <div>Menu</div>
+            <input type="checkbox" class="toggle-Sidebar" id="toggle-Sidebar">
+            <label class="bars-icon" for="toggle-Sidebar">
+                <div class="bar top"></div>
+                <div class="bar center"></div>
+                <div class="bar bottom"></div>
+            </label>
+            <nav class="navigation" id="my-navigation">
+                <ul>
+                    <li class="home"><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Products</a></li>
+                    <li><a href="shop-sidebar.html">Accesories</a></li>
+                    <li><a href="shop-list.html">Lookbook</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li class="pages">
+                        <a href="index.html">
+                            <span>pages</span>
+                            <label class="plus-icon" for="toggle-plus"></label>
+                        </a>
+                        <input type="checkbox" id="toggle-plus" class="toggle-plus">
+                        <ul class="sub-menu">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                            <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
+                            <li><a href="shop-list.html">Shop List</a></li>
+                            <li><a href="shop-list-right-sidebar.html">Shop List right sidebar</a></li>
+                            <li><a href="single-product.html">Single Product</a></li>
+                            <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
+                            <li><a href="cart.html">Shopping Cart</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="order.html">Order</a></li>
+                            <li><a href="login.html">login / Registration</a></li>
+                            <li><a href="my-account.html">My Account</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="single-blog.html">Single Blog</a></li>
+                            <li><a href="single-blog-sidebar.html">Single Blog Sidebar</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <h2>Shop</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+    <div class="shop">
+        <div class="container">
+            <div class="hover">
+                <ul>
+                    <li>
+                        <span class="show">Categories</span>
+                        <div class="categories show-panel">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li class="accordion"><span>Chair</span></li>
+                                <ul class="panel">
+                                    <li><a href="#">T-Shirts</a></li>
+                                    <li><a href="#">Striped Shirts</a></li>
+                                    <li><a href="#">Half Shirts</a></li>
+                                    <li><a href="#">Formal Shirts</a></li>
+                                    <li><a href="#">Bilazers</a></li>
+                                </ul>
+                                <li class="accordion"><span>Furniture</span></li>
+                                <ul class="panel">
+                                    <li><a href="#">Men Bag</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="#">Watc</a></li>
+                                    <li><a href="#">T-Shirt</a></li>
+                                    <li><a href="#">Shirt</a></li>
+                                </ul>
+                                <li class="accordion"><span>Accessories</span></li>
+                                <ul class="panel">
+                                    <li><a href="#">T-Shirts</a></li>
+                                    <li><a href="#">Striped Shirts</a></li>
+                                    <li><a href="#">Half Shirts</a></li>
+                                    <li><a href="#">Formal Shirts</a></li>
+                                    <li><a href="#">Bilazers</a></li>
+                                </ul>
+                                <li class="accordion"><span>Top Brands</span></li>
+                                <ul class="panel">
+                                    <li><a href="#">T-Shirts</a></li>
+                                    <li><a href="#">Striped Shirts</a></li>
+                                    <li><a href="#">Half Shirts</a></li>
+                                    <li><a href="#">Formal Shirts</a></li>
+                                    <li><a href="#">Bilazers</a></li>
+                                </ul>
+                                <li class="accordion"><span>Jewelry</span></li>
+                                <ul class="panel">
+                                    <li><a href="#">T-Shirts</a></li>
+                                    <li><a href="#">Striped Shirts</a></li>
+                                    <li><a href="#">Half Shirts</a></li>
+                                    <li><a href="#">Formal Shirts</a></li>
+                                    <li><a href="#">Bilazers</a></li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="show">Price</span>
+                        <div class="price show-panel">
+                            <h4>Categories</h4>
+                            <div class="range-slider">
+                                <div class="price-input">
+                                    <span>Your range : </span>
+                                    <div class="field">
+                                        <span>$</span>
+                                        <input type="number" class="input-min" value="50">
+                                    </div>
+                                    <div class="field">
+                                        <span>$</span>
+                                        <input type="number" class="input-max" value="1000">
+                                    </div>
+                                </div>
+                                <div class="slider-prog">
+                                    <div class="progress"></div>
+                                </div>
+                                <div class="range-input">
+                                    <input type="range" class="range-min" min="50" max="2000" value="50" step="1">
+                                    <input type="range" class="range-max" min="50" max="2000" value="1000" step="1">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="show">Color</span>
+                        <div class="color show-panel">
+                            <h4>Color</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <div>
+                                            <span class="color-one"></span>
+                                            <span>Light Salmon</span>
+                                        </div>
+                                        <span> 12</span>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <span class="color-two"></span>
+                                            <span>Dark Salmon</span>
+                                        </div>
+                                        <span>20</span>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <span class="color-three"></span>
+                                            <span>Tomato</span>
+                                        </div>
+                                        <span>59</span>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <span class="color-four"></span>
+                                            <span>Deep Sky Blue</span>
+                                        </div>
+                                        <span>45</span>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <span class="color-five"></span>
+                                            <span> Electric Purple</span>
+                                        </div>
+                                        <span>78</span>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <span class="color-six"></span>
+                                            <span>Atlantis</span>
+                                        </div>
+                                        <span>10</span>
+                                    </a>
+                                    <a href="#">
+                                        <div>
+                                            <span class="color-seven"></span>
+                                            <span> Deep Lilac</span>
+                                        </div>
+                                        <span>15</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="show">Size</span>
+                        <div class="size show-panel">
+                            <h4>Size</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">M</a>
+                                </li>
+                                <li>
+                                    <a href="#">S</a>
+                                </li>
+                                <li>
+                                    <a href="#">L</a>
+                                </li>
+                                <li>
+                                    <a href="#">SL</a>
+                                </li>
+                                <li>
+                                    <a href="#">XL</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <p>Showing 01-09 of 17 Results</p>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_01.jpg" alt="product_01">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">chopsticks rest</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span class="new">New</span>
+                        <span class="price">$20.50</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_02.jpg" alt="product_02">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">walnut stand</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span class="sale">Sale</span>
+                        <span class="price">$50.50</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_03.jpg" alt="product_03">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Egg Holder</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span></span>
+                        <span class="price">$28.50</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_04.jpg" alt="product_04">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">gold ring</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span class="sale">Sale</span>
+                        <span class="price">
+                            $10.80
+                        </span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_05.jpg" alt="product_05">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Stool</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span></span>
+                        <span class="price">$68.00</span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_06.jpg" alt="product_06">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Small Stool</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span class="new">New</span>
+                        <span class="price">
+                            $46.00
+                        </span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_07.jpg" alt="product_07">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Grey Chair</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span class="new">New</span>
+                        <span class="price">
+                            $100.50
+                        </span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_08.jpg" alt="product_08">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Glass Table</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <span></span>
+                        <span class="price">
+                            $210.00
+                        </span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_09.jpg" alt="product_09">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Pen Case</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <div class="new">New</div>
+                        <span class="price">
+                            $6.50
+                        </span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_10.png" alt="product_10">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">cupboard</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <div class="new">New</div>
+                        <span class="price">
+                            $57.00
+                        </span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_11.png" alt="product_11">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Ball Pen</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <div class="new">New</div>
+                        <span class="price">
+                            $5.80
+                        </span>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="image-product">
+                        <a href="single-product.html">
+                            <img src="images/shop/image_12.png" alt="product_12">
+                        </a>
+                    </div>
+                    <div class="info-product">
+                        <div class="top">
+                            <h4><a href="single-product.html">Sofa</a></h4>
+                        </div>
+                        <div class="bottom">
+                            <div class="stars">
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-icons">
+                        <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                        <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                        <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="cart.html" data-text="Add To Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <div class="sale-price">
+                        <div class="new">New</div>
+                        <span class="price">
+                            $1200.00$
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-arrow-left-long"></i></a></li>
+                    <li><a href="#">01</a></li>
+                    <li><a href="#">02</a></li>
+                    <li><a href="#">03</a></li>
+                    <li><a href="#">04</a></li>
+                    <li><a href="#">05</a></li>
+                    <li><a href="#"><i class="fa-solid fa-arrow-right-long"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Start Footer -->
+    <footer>
+        <div class="container">
+            <div class="contact-us">
+                <h2>Contact Us</h2>
+                <div class="content">
+                    <p>Address: </p>
+                    <address>
+                        28 Green Tower, Street Name,<br>
+                        New York City, USA
+                    </address>
+                    <p>Call-Phone: </p>
+                    <a href="tel:+880 1234 123489">+880 1234 123489</a>
+                    <p>Email:</p>
+                    <a href="mailto:your-email@gmail.com">your-email@gmail.com</a>
+                </div>
+            </div>
+            <ul class="accounts">
+                <h2>accounts</h2>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Account</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Wishlist</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Cart</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Sign In</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Check out</a></li>
+            </ul>
+            <ul class="Shipping">
+                <h2>Shipping</h2>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>New Products</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Top Sellers</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Manufactirers </a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Suppliers</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Specials</a></li>
+            </ul>
+            <div class="email-newsletters">
+                <h2>Email Newsletters</h2>
+                <form action="">
+                    <input type="text" name="email" placeholder="Email Address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Copyright And Payment -->
+    <div class="copyright-payment">
+        <div class="container">
+            <p class="copyright"> &#169; CodeCarnival 2021. All Rights Reserved.</p>
+            <div class="images-payment">
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_01.png" alt="image_01">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_02.png" alt="image_02">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_03.png" alt="image_03">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_04.png" alt="image_04">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="scroll-to-top" onclick="scrollTop()"><i class="fa-solid fa-angles-up"></i></a>
+    </div>
+    <!-- End Copyright And Payment -->
+
+    <script>
+        // Declaration Variables
+        var bars = document.querySelector('.bars-icon');
+        var plus = document.querySelector('.plus-icon');
+        var navbar = document.querySelector('.fixed-top');
+        var mylink = document.getElementById("scroll-to-top");
+
+
+        // change icon bars to X
+        bars.addEventListener('click', function () {
+            bars.classList.toggle('change-bars');
+        })
+
+
+        // change icon plus to minus
+        plus.addEventListener('click', function () {
+            plus.classList.toggle('change-plus');
+        })
+
+
+        // Open Aside bar
+        function openNav() {
+            document.getElementById("my-nav-menu").style.left = "0px";
+        }
+
+
+        // Close Aside bar
+        function closeNav() {
+            document.getElementById("my-nav-menu").style.left = "-225px";
+        }
+
+        // Scroll To Top when click on button and change color of header when scroll down
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mylink.style.display = "block";
+            } else {
+                mylink.style.display = "none";
+            }
+            if (window.scrollY > 100) {
+                navbar.classList.add('nav-active');
+            } else {
+                navbar.classList.remove('nav-active');
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function scrollTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Fullscreen Overlay
+        function openOverlaySearch() {
+            document.getElementById("my-overlay-search").style.transform = "translateY(0%)";
+        }
+
+        function closeOverlaySearch() {
+            document.getElementById("my-overlay-search").style.transform = "translateY(-100%)";
+        }
+
+        // Open one accordion tab at one time
+        // Get all Accordion and Panel
+        let accHeading = document.querySelectorAll(".accordion");
+        let accPanel = document.querySelectorAll(".panel");
+        // Execute whenever an accordion is clicked
+        for (let i = 0; i < accHeading.length; i++) {
+            accHeading[i].onclick = function () {
+                if (this.nextElementSibling.style.maxHeight) {
+                    // Hide All open Panels
+                    hidePanels();
+                } else {
+                    // Show the panel
+                    showPanel(this);
+                }
+            };
+        }
+
+        // Function to Show a Panel
+        function showPanel(elem) {
+            hidePanels();
+            elem.classList.add("active");
+            elem.nextElementSibling.style.maxHeight = elem.nextElementSibling.scrollHeight + "px";
+        }
+
+        // Function to Hide all shown Panels
+        function hidePanels() {
+            for (let i = 0; i < accPanel.length; i++) {
+                accPanel[i].style.maxHeight = null;
+                accHeading[i].classList.remove("active");
+            }
+        }
+        showPanel(accHeading[1]);
+
+        // Price Range Slider
+        const rangeInput = document.querySelectorAll(".range-input input");
+        const priceInput = document.querySelectorAll(".price-input input");
+        const range = document.querySelector(".slider-prog .progress");
+        let priceGap = 0;
+
+        priceInput.forEach(input => {
+            input.addEventListener("input", e => {
+                let minPrice = parseInt(priceInput[0].value),
+                    maxPrice = parseInt(priceInput[1].value);
+
+                if ((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1]
+                    .max) {
+                    if (e.target.className === "input-min") {
+                        rangeInput[0].value = minPrice;
+                        range.style.left = ((minPrice /
+                            rangeInput[0].max) * 100) + "%";
+                    } else {
+                        rangeInput[1].value = maxPrice;
+                        range.style.right = 100 -
+                            (maxPrice / rangeInput[1].max) * 100 + "%";
+                    }
+                }
+            });
+        });
+        rangeInput.forEach(input => {
+            input.addEventListener("input", e => {
+                let minVal = parseInt(rangeInput[0].value),
+                    maxVal = parseInt(rangeInput[1].value);
+
+                if ((maxVal - minVal) < priceGap) {
+                    if (e.target.className === "range-min") {
+                        rangeInput[0].value = maxVal -
+                            priceGap
+                    } else {
+                        rangeInput[1].value = minVal + priceGap;
+                    }
+                } else {
+                    priceInput[0].value = minVal;
+                    priceInput[1].value = maxVal;
+                    range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+                    range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+                }
+            });
+        });
+
+
+
+        // hover
+        // Get all Accordion and Panel
+        let showHeading = document.querySelectorAll(".show");
+        let showPanels = document.querySelectorAll(".show-panel");
+        // Execute whenever an accordion is clicked
+        for (let i = 0; i < showHeading.length; i++) {
+            showHeading[i].onclick = function () {
+                if (this.nextElementSibling.style.maxHeight) {
+                    // Hide All open Panels 
+                    hidePanelsTwo();
+                } else {
+                    // Show the panel 
+                    showPanelTwo(this);
+                }
+            };
+        }
+
+        // Function to Show a Panel
+        function showPanelTwo(elem) {
+            hidePanelsTwo();
+            elem.classList.add("active");
+            elem.nextElementSibling.style.maxHeight = elem.nextElementSibling.scrollHeight + "px";
+        }
+
+        // Function to Hide all shown Panels
+        function hidePanelsTwo() {
+            for (let i = 0; i < showPanels.length; i++) {
+                showPanels[i].style.maxHeight = null;
+                showHeading[i].classList.remove("active");
+            }
+        }
+    </script>
+</body>
+
+</html>

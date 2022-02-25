@@ -825,7 +825,7 @@
                             <li><a href="#">Bilazers</a></li>
                         </ul>
                         <li class="accordion"><span>Furniture</span></li>
-                        <ul class="panel">
+                        <ul class="panel" id="open">
                             <li><a href="#">Men Bag</a></li>
                             <li><a href="#">Shoes</a></li>
                             <li><a href="#">Watc</a></li>
@@ -1141,24 +1141,38 @@
                 },
             ]
         });
-        // Accordion
-        var accordion = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < accordion.length; i++) {
-            accordion[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
+        // Open one accordion tab at one time
+        // Get all Accordion and Panel
+        let accHeading = document.querySelectorAll(".accordion");
+        let accPanel = document.querySelectorAll(".panel");
+        // Execute whenever an accordion is clicked
+        for (let i = 0; i < accHeading.length; i++) {
+            accHeading[i].onclick = function () {
+                if (this.nextElementSibling.style.maxHeight) {
+                    // Hide All open Panels 
+                    hidePanels();
                 } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    // Show the panel
+                    showPanel(this);
                 }
-            });
+            };
         }
-        Object.keys(accordion).forEach(el => {
-            accordion[el].click();
-        });
+
+        // Function to Show a Panel
+        function showPanel(elem) {
+            hidePanels();
+            elem.classList.add("active");
+            elem.nextElementSibling.style.maxHeight = elem.nextElementSibling.scrollHeight + "px";
+        }
+
+        // Function to Hide all shown Panels
+        function hidePanels() {
+            for (let i = 0; i < accPanel.length; i++) {
+                accPanel[i].style.maxHeight = null;
+                accHeading[i].classList.remove("active");
+            }
+        }
+        showPanel(accHeading[1]);
     </script>
 </body>
 
