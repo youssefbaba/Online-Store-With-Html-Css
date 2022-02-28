@@ -1,0 +1,370 @@
+:root {
+    --white-color: #ffffff;
+    --secondary-color: #c8a165;
+    --third-color: #c87065;
+    --color-dark: #666666;
+    --fourth-color: #999999;
+    --fifth-color: #434343;
+    --section-padding: 40px;
+    --main-transition: 0.3s;
+}
+
+/* Start Breadcrumb  */
+.breadcrumb {
+    background-image: url("../images/breadcrumb/image_01.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.breadcrumb::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.breadcrumb .container {
+    /* for z-index */
+    position: relative;
+}
+
+.breadcrumb .container h2 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--white-color);
+    text-align: center;
+    padding: 40px 0;
+    text-transform: uppercase;
+}
+
+.breadcrumb .container ul {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.breadcrumb .container ul li+li:before {
+    padding: 15px;
+    color: var(--white-color);
+    content: "/\00a0";
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.breadcrumb .container ul li a {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    transition: var(--main-transition) ease-in-out;
+    cursor: auto;
+}
+
+.breadcrumb .container ul li:first-child a {
+    cursor: pointer;
+}
+
+.breadcrumb .container ul li:first-child a:hover {
+    color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+    .breadcrumb {
+        top: 100px;
+    }
+
+    .breadcrumb .container h2 {
+        font-size: 45px;
+        line-height: 33px;
+        padding: 100px 0;
+    }
+}
+
+/* End Breadcrumb  */
+
+
+
+/* Start About */
+.about {
+    background-color: #f6f6f6;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.about .container .header {
+    background-color: var(--white-color);
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about .container .header .image {
+    clip-path: polygon(0 0, 73% 0, 100% 100%, 0% 100%);
+}
+
+.about .container .header .image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.about .container .about-hurst {
+    background-color: #f6f6f6;
+    padding: 30px 15px;
+}
+
+.about .container .about-hurst h5 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: var(--fifth-color);
+    margin-bottom: 30px;
+}
+
+.about .container .about-hurst p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-dark);
+}
+
+.about .container .about-hurst p:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.about .container .teams h2 {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #444444;
+    position: relative;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.about .container .teams h2::before {
+    content: "";
+    position: absolute;
+    background-color: var(--third-color);
+    width: 60px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about .container .teams .membres {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about .container .teams .membres .member {
+    background-color: var(--white-color);
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.about .container .teams .membres .member:hover {
+    box-shadow: 1px 25px 54px rgb(0 0 0 / 12%);
+}
+
+.about .container .teams .membres .member img {
+    border-radius: 50%;
+}
+
+.about .container .teams .membres .member h3 {
+    font-family: 'Bree Serif', serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    margin: 20px 0 10px 0;
+}
+
+.about .container .teams .membres .member h4 {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--fourth-color);
+    text-transform: uppercase;
+}
+
+.about .container .teams .membres .member p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--fourth-color);
+    margin: 10px 0 20px 0;
+}
+
+.about .container .teams .membres .member ul {
+    display: flex;
+    gap: 5px;
+}
+
+.about .container .teams .membres .member ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+    color: var(--fourth-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+.about .container .teams .membres .member ul li a:hover {
+    color: var(--secondary-color);
+}
+
+@media (min-width: 480px) {
+    .about .container .teams h2 {
+        font-size: 22px;
+        line-height: 22px;
+    }
+}
+
+@media (min-width:768px) {
+    .about {
+        margin-top: 100px;
+        padding-top: calc(var(--section-padding) * 2);
+        padding-bottom: calc(var(--section-padding) * 2);
+    }
+
+    .about .container .header .image {
+        width: 85%;
+    }
+
+    .about .container .header,
+    .about .container .about-hurst {
+        padding: 30px;
+    }
+
+    .about .container .teams h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .about .container .teams .membres {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .about .container .teams .membres .member {
+        flex-basis: calc((100% - 30px) * 0.5);
+    }
+}
+
+@media (min-width:992px) {
+    .about .container .header {
+        flex-direction: row;
+        position: relative;
+    }
+
+    .about .container .header .image {
+        flex-basis: 50%;
+    }
+
+    .about .container .header .about-hurst {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(50% - 200px);
+        right: 30px;
+    }
+
+    .about .container .teams .membres .member {
+        flex-basis: calc((100% - 90px) * 0.25);
+    }
+}
+
+/* End  About */
+/* Start Footer */
+footer {
+    background-color: #eeeeee;
+}
+
+footer .container .email-newsletters {
+    flex-basis: 100%;
+}
+
+footer .container .email-newsletters form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .container .email-newsletters form input {
+    flex-basis: 100%;
+    border: none;
+    background-color: #f6f6f6;
+    padding: 12px 20px;
+    caret-color: var(--fourth-color);
+}
+
+footer .container .email-newsletters form button {
+    background-color: #f7f7f7;
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer .container .email-newsletters form button::before {
+    content: "Subscribe";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+footer .container .email-newsletters form button:hover::before {
+    left: 0;
+}
+
+footer .container .email-newsletters form button:focus,
+footer .container .email-newsletters form input:focus {
+    outline: none;
+}
+
+footer .container .email-newsletters form input::placeholder {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--fourth-color);
+}
+
+@media (min-width: 768px) {
+    footer .container .email-newsletters {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    footer .container .email-newsletters {
+        flex-basis: calc(100% / 3);
+    }
+}
+
+/* End Footer */

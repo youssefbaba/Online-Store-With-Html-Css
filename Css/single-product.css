@@ -207,12 +207,19 @@ main .container .main-content .single-product .info .desc .name-product-rating {
     gap: 5px;
 }
 
-main .container .main-content .single-product .info .desc .name-product-rating h4 {
-    font-weight: 700;
+main .container .main-content .single-product .info .desc .name-product-rating h4 a {
+    font-family: 'Bree Serif',
+        serif;
+    font-weight: 400;
     font-size: 16px;
     line-height: 18px;
-    color: var(--fifth-color);
     text-transform: uppercase;
+    color: var(--fifth-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+main .container .main-content .single-product .info .desc .name-product-rating h4 a:hover {
+    color: var(--secondary-color);
 }
 
 main .container .main-content .single-product .info .desc .name-product-rating .rating ul,
@@ -584,6 +591,7 @@ main .container .main-content .product-tab .tab-content .customer-review .box .t
     line-height: 30px;
     text-align: center;
     color: var(--fourth-color);
+    font-size: 13px;
     transition: 0.3s ease-in-out;
 }
 
@@ -601,10 +609,6 @@ main .container .main-content .product-tab .tab-content .customer-review .box .t
 
 main .container .main-content .product-tab .tab-content .customer-review .box .text a:hover i {
     color: var(--white-color);
-}
-
-main .container .main-content .product-tab .tab-content .customer-review .box .text a i {
-    font-size: 13px;
 }
 
 main .container .main-content .product-tab .tab-content .leave-your-review>h4 {

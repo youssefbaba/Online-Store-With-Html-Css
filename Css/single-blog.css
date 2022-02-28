@@ -1,0 +1,598 @@
+/* Start Breadcrumb  */
+.breadcrumb {
+    background-image: url("../images/breadcrumb/image_01.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.breadcrumb::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.breadcrumb .container {
+    /* for z-index */
+    position: relative;
+}
+
+.breadcrumb .container h2 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--white-color);
+    text-align: center;
+    padding: 40px 0;
+    text-transform: uppercase;
+}
+
+.breadcrumb .container ul {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.breadcrumb .container ul li+li:before {
+    padding: 15px;
+    color: var(--white-color);
+    content: "/\00a0";
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.breadcrumb .container ul li a {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    transition: var(--main-transition) ease-in-out;
+    cursor: auto;
+}
+
+.breadcrumb .container ul li:first-child a {
+    cursor: pointer;
+}
+
+.breadcrumb .container ul li:first-child a:hover {
+    color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+    .breadcrumb {
+        top: 100px;
+    }
+
+    .breadcrumb .container h2 {
+        font-size: 45px;
+        line-height: 33px;
+        padding: 100px 0;
+    }
+}
+
+/* End Breadcrumb  */
+/* Start Single Blog */
+.single-blog {
+    background-color: #f6f6f6;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.single-blog .container .main-content {
+    background-color: var(--white-color);
+    padding: 15px;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.single-blog .container .main-content:hover {
+    box-shadow: 1px 25px 54px rgb(0 0 0 / 12%);
+}
+
+.single-blog .container .main-content>.image {
+    position: relative;
+}
+
+.single-blog .container .main-content>.image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.single-blog .container .main-content .image .icons {
+    background-color: #eaeaea;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    gap: 10px;
+    padding-left: 5px;
+}
+
+.single-blog .container .main-content .image .icons>a {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #444444;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.single-blog .container .main-content .image .icons>a:nth-child(2) {
+    display: none;
+}
+
+.single-blog .container .main-content .image .icons>a:hover {
+    color: var(--third-color);
+}
+
+.single-blog .container .main-content .image .icons>a i {
+    margin-right: 5px;
+}
+
+.single-blog .container .main-content .image .date {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+    height: 40px;
+    background-color: var(--white-color);
+    border: 1px solid var(--third-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-blog .container .main-content .image .date span {
+    display: block;
+    color: var(--third-color);
+    font-weight: 700;
+}
+
+.single-blog .container .main-content .image .date span:first-child {
+    font-size: 14px;
+    line-height: 10px;
+    margin-bottom: 5px;
+}
+
+.single-blog .container .main-content .image .date span:last-child {
+    font-size: 10px;
+    line-height: 10px;
+    text-transform: uppercase;
+}
+
+.single-blog .container .main-content .title-content h4 a {
+    display: block;
+    font-family: 'Bree Serif', serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--fifth-color);
+    transition: var(--main-transition) ease-in-out;
+    padding: 20px 0;
+}
+
+.single-blog .container .main-content .title-content h4 a:hover {
+    color: var(--secondary-color);
+}
+
+.single-blog .container .main-content p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-dark);
+}
+
+.single-blog .container .main-content .title-content p {
+    margin-bottom: 20px;
+}
+
+.single-blog .container .main-content .title-content p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.single-blog .container .main-content .share-tags {
+    background-color: #f6f6f6;
+    padding: 15px 10px;
+    margin-top: 40px;
+}
+
+.single-blog .container .main-content .share-tags .share,
+.single-blog .container .main-content .share-tags .tags {
+    display: flex;
+    gap: 20px;
+}
+
+.single-blog .container .main-content .share-tags span {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-dark);
+    text-transform: uppercase;
+}
+
+.single-blog .container .main-content .share-tags ul {
+    display: flex;
+    gap: 20px;
+}
+
+.single-blog .container .main-content .tags ul {
+    gap: 10px;
+}
+
+.single-blog .container .main-content .share-tags ul li a {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--fourth-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+.single-blog .container .main-content .share-tags ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.single-blog .container .main-content .authority {
+    background-color: #f6f6f6;
+    margin: 40px 0;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-blog .container .main-content .authority .image img {
+    border-radius: 50%;
+}
+
+.single-blog .container .main-content .authority .text h3 {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.32px;
+    color: var(--fifth-color);
+    text-align: center;
+}
+
+.single-blog .container .main-content .authority .text p {
+    margin: 10px 0;
+}
+
+.single-blog .container .main-content .reviews h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--fifth-color);
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.single-blog .container .main-content .reviews h4::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 0.5px;
+    background-color: #eee;
+    left: 0;
+    bottom: 0;
+}
+
+.single-blog .container .main-content .reviews .customer-review .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.single-blog .container .main-content .reviews .customer-review .box .text {
+    text-align: center;
+}
+
+.single-blog .container .main-content .reviews .customer-review .box .text h4 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.single-blog .container .main-content .reviews .customer-review .box .text .date {
+    color: var(--fourth-color);
+}
+
+.single-blog .container .main-content .reviews .customer-review .box .text .links {
+    margin: 10px 0;
+}
+
+.single-blog .container .main-content .reviews .customer-review .box .text a {
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f6f6f6;
+    text-align: center;
+    font-size: 13px;
+    color: var(--fourth-color);
+    transition: 0.3s ease-in-out;
+}
+
+.single-blog .container .main-content .reviews .customer-review .box .text a:first-child {
+    margin-right: 5px;
+}
+
+.single-blog .container .main-content .reviews .customer-review .box .text a:hover {
+    background-color: var(--secondary-color);
+}
+
+.single-blog .container .main-content .reviews .customer-review .box .text a i {
+    transition: 0.3s ease-in-out 0.2s;
+}
+
+.single-blog .container .main-content .reviews .customer-review .box .text a:hover i {
+    color: var(--white-color);
+}
+
+.single-blog .container .main-content .reviews .leave-your-review>h4 {
+    padding-top: 10px;
+}
+
+.single-blog .container .main-content .reviews .leave-your-review form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.single-blog .container .main-content .reviews .leave-your-review form input,
+.single-blog .container .main-content .reviews .leave-your-review form textarea {
+    background-color: #f6f6f6;
+    caret-color: var(--fourth-color);
+    color: var(--fourth-color);
+    border: none;
+    outline: none;
+    width: 100%;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.single-blog .container .main-content .reviews .leave-your-review form input {
+    height: 40px;
+    padding: 0 20px;
+}
+
+.single-blog .container .main-content .reviews .leave-your-review form textarea {
+    height: 100px;
+    padding: 15px 20px;
+}
+
+.single-blog .container .main-content .reviews .leave-your-review form button {
+    background-color: var(--third-color);
+    color: var(--white-color);
+    height: 35px;
+    line-height: 35px;
+    padding: 0 30px;
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.single-blog .container .main-content .reviews .leave-your-review form button::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+.single-blog .container .main-content .reviews .leave-your-review form button:hover::before {
+    left: 0;
+}
+
+@media (min-width:768px) {
+    .single-blog {
+        margin-top: 100px;
+        padding-top: calc(var(--section-padding) * 2);
+        padding-bottom: calc(var(--section-padding) * 2);
+    }
+
+    .single-blog .container .main-content {
+        padding: 30px;
+    }
+
+    .single-blog .container .main-content .image .icons>a:nth-child(2) {
+        display: block;
+    }
+
+    .single-blog .container .main-content .image .date span:first-child {
+        font-size: 30px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .single-blog .container .main-content .image .date span:last-child {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .single-blog .container .main-content .image .date {
+        width: 70px;
+        height: 70px;
+    }
+
+    .single-blog .container .main-content .title-content h4 a {
+        font-size: 22px;
+        padding: 30px 0;
+    }
+
+    .single-blog .container .main-content .share-tags,
+    .single-blog .container .main-content .reviews .customer-review .box .text>div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .single-blog .container .main-content .share-tags {
+        padding: 15px 20px;
+    }
+
+    .single-blog .container .main-content .tags ul {
+        gap: 20px;
+    }
+
+    .single-blog .container .main-content .authority,
+    .single-blog .container .main-content .reviews .customer-review .box {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .single-blog .container .main-content .authority {
+        gap: 25px;
+    }
+
+    .single-blog .container .main-content .authority .image {
+        width: 100px;
+    }
+
+    .single-blog .container .main-content .authority .text {
+        flex: 1;
+    }
+
+    .single-blog .container .main-content .authority .text h3,
+    .single-blog .container .main-content .reviews .customer-review .box .text {
+        text-align: left;
+    }
+
+    .single-blog .container .main-content .reviews .customer-review .box {
+        gap: 30px;
+    }
+
+    .single-blog .container .main-content .reviews .customer-review .box .text h4 {
+        margin-top: 0;
+    }
+
+    .single-blog .container .main-content .reviews .customer-review .box .text .links {
+        margin: 0;
+    }
+
+    .single-blog .container .main-content .reviews .customer-review .box .text .date {
+        margin-bottom: 10px;
+    }
+
+    .single-blog .container .main-content .reviews .leave-your-review form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .single-blog .container .main-content .reviews .leave-your-review form .form-group:nth-child(1),
+    .single-blog .container .main-content .reviews .leave-your-review form .form-group:nth-child(2) {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+
+    .single-blog .container .main-content .reviews .leave-your-review form .form-group:nth-child(3),
+    .single-blog .container .main-content .reviews .leave-your-review form .form-submit:nth-child(4) {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width:1200px) {
+    .single-blog .container .main-content .image .icons {
+        gap: 20px;
+    }
+}
+
+/* End Single Blog */
+
+/* Start Footer */
+footer {
+    background-color: #eeeeee;
+}
+
+footer .container .email-newsletters {
+    flex-basis: 100%;
+}
+
+footer .container .email-newsletters form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .container .email-newsletters form input {
+    flex-basis: 100%;
+    border: none;
+    background-color: #f6f6f6;
+    padding: 12px 20px;
+    caret-color: var(--fourth-color);
+}
+
+footer .container .email-newsletters form button {
+    background-color: #f7f7f7;
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer .container .email-newsletters form button::before {
+    content: "Subscribe";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+footer .container .email-newsletters form button:hover::before {
+    left: 0;
+}
+
+footer .container .email-newsletters form button:focus,
+footer .container .email-newsletters form input:focus {
+    outline: none;
+}
+
+footer .container .email-newsletters form input::placeholder {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--fourth-color);
+}
+
+@media (min-width: 768px) {
+    footer .container .email-newsletters {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    footer .container .email-newsletters {
+        flex-basis: calc(100% / 3);
+    }
+}
+
+/* End Footer */

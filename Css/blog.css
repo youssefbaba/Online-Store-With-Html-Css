@@ -75,15 +75,15 @@
 }
 
 /* End Breadcrumb  */
-/* Start Shop */
-/* Start Main Content */
-.shop {
+/* Start Blog */
+.blog {
     background-color: #f6f6f6;
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
 
-.shop .container .main-content .hover {
+/* Start Hover */
+.blog .container .hover {
     background-color: var(--white-color);
     display: flex;
     justify-content: space-between;
@@ -94,22 +94,22 @@
     font-size: 13px;
 }
 
-.shop .container .main-content .hover>ul {
+.blog .container .hover>ul {
     display: flex;
     gap: 20px;
 }
 
-.shop .container .main-content .hover>ul>li {
+.blog .container .hover>ul>li {
     position: relative;
 }
 
-.shop .container .main-content .hover>ul>li>span.show {
+.blog .container .hover>ul>li>span.show {
     color: var(--fourth-color);
     cursor: pointer;
     transition: var(--main-transition) ease-in-out;
 }
 
-.shop .container .main-content .hover>ul>li>div {
+.blog .container .hover>ul>li>div {
     background-color: var(--white-color);
     width: 290px;
     position: absolute;
@@ -121,7 +121,7 @@
     z-index: 100;
 }
 
-.shop .container .main-content .hover>ul>li>div::after {
+.blog .container .hover>ul>li>div::after {
     content: "";
     position: absolute;
     left: 0;
@@ -133,117 +133,117 @@
     z-index: -1;
 }
 
-.shop .container .main-content .hover>ul>li>div h4 {
+.blog .container .hover>ul>li>div h4 {
     font-weight: 700;
     font-size: 18px;
     line-height: 28px;
     color: var(--fifth-color);
     text-transform: uppercase;
-    padding: 30px 30px 30px 30px;
+    padding: 30px;
 }
 
-.shop .container .main-content .hover>ul>li>div.categories>ul {
+.blog .container .hover>ul>li>div.categories>ul {
     height: 290px;
     width: 100%;
     padding: 0 30px 30px 30px;
 }
 
-.shop .container .main-content .hover>ul>li>div.categories ul li.accordion span,
-.shop .container .main-content .hover>ul>li>div.categories ul li.accordion+.panel li a {
+.blog .container .hover>ul>li>div.categories ul li.accordion span,
+.blog .container .hover>ul>li>div.categories ul li.accordion+.panel li a {
     display: block;
     line-height: 25px;
     transition: var(--main-transition) ease-in-out;
 }
 
-.shop .container .main-content .hover>ul>li>div.categories ul li.accordion span {
+.blog .container .hover>ul>li>div.categories ul li.accordion span {
     color: var(--color-dark);
     font-size: 14px;
     cursor: pointer;
 }
 
-.shop .container .main-content .hover>ul>li>div.categories ul li.accordion+.panel li a {
+.blog .container .hover>ul>li>div.categories ul li.accordion+.panel li a {
     color: var(--fourth-color);
     font-size: 13px;
 }
 
-.shop .container .main-content .hover>ul>li>span.active,
-.shop .container .main-content .hover>ul>li>span:hover,
-.shop .container .main-content .hover>ul>li>div.categories ul li.active span,
-.shop .container .main-content .hover>ul>li>div.categories ul li.accordion:hover span,
-.shop .container .main-content .hover>ul>li>div.categories ul li.accordion+.panel li:hover a {
+.blog .container .hover>ul>li>span.active,
+.blog .container .hover>ul>li>span:hover,
+.blog .container .hover>ul>li>div.categories ul li.active span,
+.blog .container .hover>ul>li>div.categories ul li.accordion:hover span,
+.blog .container .hover>ul>li>div.categories ul li.accordion+.panel li:hover a {
     color: var(--secondary-color);
 }
 
-.shop .container .main-content .hover>ul>li>div.categories ul .accordion+.panel {
+.blog .container .hover>ul>li>div.categories ul .accordion+.panel {
     padding-left: 20px;
     max-height: 0;
     overflow: hidden;
     transition: max-height var(--main-transition) ease-out;
 }
 
-.shop .container .main-content .hover>p {
+.blog .container .hover>p {
     display: none;
     color: var(--color-dark);
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider {
+.blog .container .hover>ul>li>div.price .range-slider {
     padding: 0 30px 30px 30px;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input {
+.blog .container .hover>ul>li>div.price .range-slider .price-input {
     display: flex;
     margin-bottom: 10px;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input .field {
+.blog .container .hover>ul>li>div.price .range-slider .price-input .field {
     display: flex;
     white-space: nowrap;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input .field,
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input>span {
+.blog .container .hover>ul>li>div.price .range-slider .price-input .field,
+.blog .container .hover>ul>li>div.price .range-slider .price-input>span {
     display: block;
     height: 50px;
     line-height: 50px;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input>span,
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input .field span,
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input .field input[type="number"] {
+.blog .container .hover>ul>li>div.price .range-slider .price-input>span,
+.blog .container .hover>ul>li>div.price .range-slider .price-input .field span,
+.blog .container .hover>ul>li>div.price .range-slider .price-input .field input[type="number"] {
     font-weight: 400;
     font-size: 16px;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input .field span,
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input .field input[type="number"] {
+.blog .container .hover>ul>li>div.price .range-slider .price-input .field span,
+.blog .container .hover>ul>li>div.price .range-slider .price-input .field input[type="number"] {
     color: var(--fourth-color);
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input>span {
+.blog .container .hover>ul>li>div.price .range-slider .price-input>span {
     color: var(--color-dark);
     margin-right: 15px;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input .field input[type="number"] {
+.blog .container .hover>ul>li>div.price .range-slider .price-input .field input[type="number"] {
+    width: 45px;
     outline: none;
     border: none;
     -moz-appearance: textfield;
-    width: 45px;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input .field input[type="number"]::-webkit-outer-spin-button,
-.shop .container .main-content .hover>ul>li>div.price .range-slider .price-input .field input[type="number"]::-webkit-inner-spin-button {
+.blog .container .hover>ul>li>div.price .range-slider .price-input .field input[type="number"]::-webkit-outer-spin-button,
+.blog .container .hover>ul>li>div.price .range-slider .price-input .field input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .slider-prog {
+.blog .container .hover>ul>li>div.price .range-slider .slider-prog {
     height: 3px;
     position: relative;
     background: #dcdcdc;
     border-radius: 1px;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .slider-prog .progress {
+.blog .container .hover>ul>li>div.price .range-slider .slider-prog .progress {
     position: absolute;
     left: 0%;
     right: 50%;
@@ -252,11 +252,11 @@
     background: var(--third-color);
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .range-input {
+.blog .container .hover>ul>li>div.price .range-slider .range-input {
     position: relative;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider .range-input input {
+.blog .container .hover>ul>li>div.price .range-slider .range-input input {
     position: absolute;
     width: 100%;
     height: 3px;
@@ -267,7 +267,7 @@
     -moz-appearance: none;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider input[type="range"]::-webkit-slider-thumb {
+.blog .container .hover>ul>li>div.price .range-slider input[type="range"]::-webkit-slider-thumb {
     height: 12px;
     width: 12px;
     border-radius: 50%;
@@ -277,7 +277,7 @@
     -webkit-appearance: none;
 }
 
-.shop .container .main-content .hover>ul>li>div.price .range-slider input[type="range"]::-moz-range-thumb {
+.blog .container .hover>ul>li>div.price .range-slider input[type="range"]::-moz-range-thumb {
     height: 10px;
     width: 10px;
     border: 2px solid var(--third-color);
@@ -287,43 +287,43 @@
     -moz-appearance: none;
 }
 
-.shop .container .main-content .hover>ul>li>div.color>ul {
+.blog .container .hover>ul>li>div.color>ul {
     padding: 0px 30px 30px 30px;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a {
+.blog .container .hover>ul>li>div.color ul li a {
     display: flex;
     justify-content: space-between;
     line-height: 28px;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a>div {
+.blog .container .hover>ul>li>div.color ul li a>div {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a>div>span:first-of-type {
+.blog .container .hover>ul>li>div.color ul li a>div>span:first-of-type {
     display: block;
     width: 15px;
     height: 15px;
     position: relative;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a>div>span:last-of-type,
-.shop .container .main-content .hover>ul>li>div.color ul li a>span {
+.blog .container .hover>ul>li>div.color ul li a>div>span:last-of-type,
+.blog .container .hover>ul>li>div.color ul li a>span {
     font-weight: 400;
     font-size: 14px;
     color: var(--fifth-color);
     transition: var(--main-transition) ease-in-out;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a:hover>div>span:last-of-type,
-.shop .container .main-content .hover>ul>li>div.color ul li a:hover>span {
+.blog .container .hover>ul>li>div.color ul li a:hover>div>span:last-of-type,
+.blog .container .hover>ul>li>div.color ul li a:hover>span {
     color: var(--secondary-color);
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a>div>span:first-of-type::before {
+.blog .container .hover>ul>li>div.color ul li a>div>span:first-of-type::before {
     content: "";
     position: absolute;
     left: 50%;
@@ -336,45 +336,45 @@
     transition: var(--main-transition) ease-in-out;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a:hover>div>span:first-of-type::before {
+.blog .container .hover>ul>li>div.color ul li a:hover>div>span:first-of-type::before {
     opacity: 1;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a>div>span:first-of-type.color-one {
+.blog .container .hover>ul>li>div.color ul li a>div>span:first-of-type.color-one {
     background-color: #ffa07a;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a>div>span:first-of-type.color-two {
+.blog .container .hover>ul>li>div.color ul li a>div>span:first-of-type.color-two {
     background-color: #e9967a;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a>div>span:first-of-type.color-three {
+.blog .container .hover>ul>li>div.color ul li a>div>span:first-of-type.color-three {
     background-color: #fe5858;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a>div>span:first-of-type.color-four {
+.blog .container .hover>ul>li>div.color ul li a>div>span:first-of-type.color-four {
     background-color: #00b2ee;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a>div>span:first-of-type.color-five {
+.blog .container .hover>ul>li>div.color ul li a>div>span:first-of-type.color-five {
     background-color: #00eeb3;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a>div>span:first-of-type.color-six {
+.blog .container .hover>ul>li>div.color ul li a>div>span:first-of-type.color-six {
     background-color: #8dc63f;
 }
 
-.shop .container .main-content .hover>ul>li>div.color ul li a>div>span:first-of-type.color-seven {
+.blog .container .hover>ul>li>div.color ul li a>div>span:first-of-type.color-seven {
     background-color: #c38b4b;
 }
 
-.shop .container .main-content .hover>ul>li>div.size>ul {
+.blog .container .hover>ul>li>div.size>ul {
     display: flex;
     gap: 10px;
     padding: 0px 30px 30px 30px;
 }
 
-.shop .container .main-content .hover>ul>li>div.size ul li a {
+.blog .container .hover>ul>li>div.size ul li a {
     display: block;
     width: 34px;
     height: 34px;
@@ -387,58 +387,108 @@
     transition: var(--main-transition) ease-in-out;
 }
 
-.shop .container .main-content .hover>ul>li>div.size ul li a:hover {
+.blog .container .hover>ul>li>div.size ul li a:hover {
     color: var(--white-color);
     background-color: var(--secondary-color);
 }
 
-@media (min-width:768px) {
-    .shop {
-        margin-top: 100px;
-        padding-top: calc(var(--section-padding) * 2);
-        padding-bottom: calc(var(--section-padding) * 2);
-    }
-
-    .shop .container .main-content .hover>p {
-        display: block;
-    }
-}
-
-.shop .container .main-content .products {
+/* End Hover */
+/* Start Articles */
+.blog .container .articles {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
+}
+
+.blog .container .articles article {
+    background-color: var(--white-color);
     display: flex;
     flex-direction: column;
     gap: 30px;
-}
-
-.shop .container .main-content .products .product {
     padding: 15px;
-    position: relative;
-    background-color: var(--white-color);
-    flex-basis: 100%;
     transition: var(--main-transition) ease-in-out;
 }
 
-.shop .container .main-content .products .product:hover {
+.blog .container .articles article:hover {
     box-shadow: 1px 25px 54px rgb(0 0 0 / 12%);
 }
 
-.shop .container .main-content .products .product .image-product img {
+.blog .container .articles article .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog .container .articles article .image .icons {
+    background-color: #eaeaea;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    gap: 10px;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.blog .container .articles article:hover .image .icons {
+    bottom: 0;
+}
+
+.blog .container .articles article .image .icons>a {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #444444;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.blog .container .articles article .image .icons>a:hover {
+    color: var(--third-color);
+}
+
+.blog .container .articles article .image .icons>a i {
+    margin-right: 5px;
+}
+
+.blog .container .articles article .image a {
     display: block;
+}
+
+.blog .container .articles article .image img {
     width: 100%;
     height: 100%;
 }
 
-.shop .container .main-content .products .product .info-product {
+.blog .container .articles article .text .header {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background-color: var(--white-color);
-    text-align: center;
+    gap: 10px;
 }
 
-.shop .container .main-content .products .product .info-product h4 a {
+.blog .container .articles article .text .header span {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--third-color);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid var(--third-color);
+}
+
+.blog .container .articles article .text .header div p {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--third-color);
+    text-transform: uppercase;
+}
+
+.blog .container .articles article .text .header>div h4 a {
     display: block;
     font-family: 'Bree Serif', serif;
     font-weight: 400;
@@ -447,102 +497,56 @@
     text-transform: uppercase;
     color: var(--fifth-color);
     transition: var(--main-transition) ease-in-out;
+    margin-top: 5px;
+}
+
+.blog .container .articles article .text .header>div h4 a:hover {
+    color: var(--secondary-color);
+}
+
+.blog .container .articles article .text>p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-dark);
+    margin-top: 12px;
+}
+
+.blog .container .articles article .text>a {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--third-color);
     margin-top: 15px;
 }
 
-.shop .container .main-content .products .product .info-product h4 a:hover {
-    color: var(--secondary-color);
-}
-
-.shop .container .main-content .products .product .info-product .stars a i {
-    font-size: 13px;
-    color: var(--third-color);
-}
-
-.shop .container .main-content .products .product .product-icons {
-    display: flex;
-    width: 100%;
-    padding: 10px 0;
-    background-color: #f6f6f6;
-    margin: 15px 0;
-}
-
-.shop .container .main-content .products .product .product-icons a:not(:last-child) {
-    border-right: 1px solid var(--fourth-color);
-}
-
-.shop .container .main-content .products .product .product-icons a i {
-    color: var(--fourth-color);
-    font-size: 13px;
-    transition: 0.3s ease-in-out;
-}
-
-.shop .container .main-content .products .product .product-icons a:hover i {
-    color: var(--secondary-color);
-}
-
-.shop .container .main-content .products .product .sale-price {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 30px;
-    width: calc(100% - 60px);
-}
-
-.shop .container .main-content .products .product .sale-price .price {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 28px;
-    color: var(--third-color);
-}
-
-.shop .container .main-content .products .product .sale-price .sale,
-.shop .container .main-content .products .product .sale-price .new {
-    color: var(--white-color);
-    height: 25px;
-    line-height: 25px;
-    padding: 0 10px;
-    font-weight: 400;
-    font-size: 13px;
-    border-radius: 5px;
-}
-
-.shop .container .main-content .products .product .sale-price .sale {
-    background-color: var(--third-color);
-}
-
-.shop .container .main-content .products .product .sale-price .new {
-    background-color: var(--secondary-color);
-}
-
-@media (min-width: 768px) {
-    .shop .container .main-content .products {
+@media (min-width:768px) {
+    .blog .container .articles {
         flex-direction: row;
-        flex-wrap: wrap;
-        gap: 30px;
     }
 
-    .shop .container .main-content .products .product {
+    .blog .container .articles article {
         flex-basis: calc((100% - 30px) / 2);
+        padding: 25px;
     }
 }
 
-@media (min-width: 992px) {
-    .shop .container .main-content .products .product {
+@media (min-width:992px) {
+    .blog .container .articles article {
         flex-basis: calc((100% - 60px) / 3);
     }
 }
 
 @media (min-width: 1200px) {
-    .shop .container .main-content .products .product {
-        flex-basis: calc((100% - 90px) / 4);
+    .blog .container .articles article .image .icons {
+        gap: 20px;
     }
 }
 
-.shop .container .main-content .pagination {
+/* End Articles */
+/* Start Pagination */
+.blog .container .pagination {
     background-color: var(--white-color);
     height: 50px;
     line-height: 50px;
@@ -550,23 +554,40 @@
     justify-content: center;
 }
 
-.shop .container .main-content .pagination ul {
+.blog .container .pagination ul {
     display: flex;
     gap: 15px;
 }
 
-.shop .container .main-content .pagination ul li a {
+.blog .container .pagination ul li a {
     font-weight: 400;
     font-size: 13px;
     color: var(--color-dark);
     transition: var(--main-transition) ease-in-out;
 }
 
-.shop .container .main-content .pagination ul li a:hover {
+.blog .container .pagination ul li a:hover {
     color: var(--secondary-color);
 }
 
-/* End Shop */
+/* End Pagination */
+@media (min-width:768px) {
+    .blog {
+        margin-top: 100px;
+        padding-top: calc(var(--section-padding) * 2);
+        padding-bottom: calc(var(--section-padding) * 2);
+    }
+
+    .blog .container .hover>p {
+        display: block;
+    }
+}
+
+
+
+
+/* End Blog */
+
 /* Start Footer */
 footer {
     background-color: #eeeeee;

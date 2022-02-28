@@ -1,0 +1,308 @@
+:root {
+    --white-color: #ffffff;
+    --secondary-color: #c8a165;
+    --third-color: #c87065;
+    --color-dark: #666666;
+    --fourth-color: #999999;
+    --fifth-color: #434343;
+    --section-padding: 40px;
+    --main-transition: 0.3s;
+}
+
+.single-blog .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.single-blog .container .main-content {
+    padding-bottom: var(--section-padding);
+}
+
+@media (min-width:992px) {
+    .single-blog .container {
+        flex-direction: row;
+    }
+
+    .single-blog .container .main-content {
+        flex-basis: calc((100% - 30px) * 0.75);
+    }
+
+    .single-blog .container aside {
+        flex-basis: calc((100% - 30px) * 0.25);
+    }
+}
+
+/* Start Aside */
+
+
+.single-blog .container aside {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.single-blog .container aside form {
+    background-color: var(--white-color);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.single-blog .container aside form input {
+    flex-basis: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 13px;
+    caret-color: var(--fourth-color);
+    color: var(--fourth-color);
+}
+
+.single-blog .container aside form button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.single-blog .container aside form button i {
+    color: var(--fourth-color);
+    font-size: 20px;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.single-blog .container aside form button:hover i,
+.single-blog .container aside form button:focus i {
+    color: var(--secondary-color);
+}
+
+.single-blog .container aside .categories {
+    background-color: var(--white-color);
+    padding: 30px 15px;
+}
+
+.single-blog .container aside .categories .scroll {
+    height: 290px;
+}
+
+.single-blog .container aside h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--fifth-color);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.single-blog .container aside .categories>ul>li.accordion span,
+.single-blog .container aside .categories>ul>li.accordion+.panel a {
+    color: var(--color-dark);
+    display: block;
+    line-height: 25px;
+    cursor: pointer;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.single-blog .container aside .categories>ul>li.accordion span {
+    color: var(--color-dark);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.single-blog .container aside .categories>ul>li.accordion+.panel a {
+    color: var(--fourth-color);
+    font-size: 13px;
+}
+
+.single-blog .container aside .categories>ul li.active span,
+.single-blog .container aside .categories>ul li.accordion:hover span,
+.single-blog .container aside .categories>ul li.accordion+.panel li:hover a {
+    color: var(--secondary-color);
+}
+
+.single-blog .container aside .categories>ul li+.panel {
+    padding-left: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.single-blog .container aside .recent-products {
+    background-color: var(--white-color);
+    padding: 30px 15px;
+}
+
+.single-blog .container aside .recent-products .box {
+    display: flex;
+    gap: 20px;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.single-blog .container aside .recent-products .box:hover {
+    box-shadow: 1px 25px 54px rgb(0 0 0 / 12%);
+}
+
+.single-blog .container aside .recent-products .box:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.single-blog .container aside .recent-products .box .image {
+    flex-basis: 35%;
+}
+
+.single-blog .container aside .recent-products .box .image a {
+    display: block;
+}
+
+.single-blog .container aside .recent-products .box .image a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.single-blog .container aside .recent-products .box .text h4 {
+    font-family: 'Bree Serif', serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.single-blog .container aside .recent-products .box .text h4 a {
+    color: var(--fifth-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+.single-blog .container aside .recent-products .box .text h4 a:hover {
+    color: var(--secondary-color);
+}
+
+.single-blog .container aside .recent-products .box .text>a {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: var(--fourth-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+.single-blog .container aside .recent-products .box .text>a:hover {
+    color: var(--secondary-color);
+}
+
+.single-blog .container aside .best-brand {
+    background-color: var(--white-color);
+    padding: 30px 15px;
+}
+
+.single-blog .container aside .best-brand a {
+    display: block;
+    position: relative;
+}
+
+.single-blog .container aside .best-brand a img {
+    max-width: 100%;
+}
+
+.single-blog .container aside .best-brand a::before,
+.single-blog .container aside .best-brand a::after {
+    position: absolute;
+    background-color: #fd5954;
+    color: var(--fourth-color);
+    font-weight: 900;
+    font-size: 25px;
+    left: 0;
+    width: fit-content;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 20px;
+}
+
+.single-blog .container aside .best-brand a::before {
+    content: "BEST";
+    top: 10px;
+}
+
+.single-blog .container aside .best-brand a::after {
+    content: "BRAND";
+    top: 40px;
+}
+
+.single-blog .container aside .recent-comments {
+    background-color: var(--white-color);
+    padding: 30px 15px;
+}
+
+.single-blog .container aside .recent-comments .comment {}
+
+.single-blog .container aside .recent-comments .comment:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.single-blog .container aside .recent-comments .comment h5 a {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--fifth-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+.single-blog .container aside .recent-comments .comment h5 a:hover {
+    color: var(--secondary-color);
+}
+
+.single-blog .container aside .recent-comments .comment p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-dark);
+}
+
+@media (min-width:768px) {
+    .single-blog .container aside .recent-products .box {
+        width: 450px;
+        padding: 10px 15px;
+    }
+
+    .single-blog .container aside .recent-products .box .text h4 {
+        font-size: 15px;
+    }
+
+    .single-blog .container aside .recent-products .box .text span {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+    .single-blog .container aside .recent-products .box {
+        width: 100%;
+        padding: 0;
+    }
+
+    .single-blog .container aside .recent-products .box .text h4 {
+        font-size: 13px;
+    }
+
+    .single-blog .container aside .recent-products .box .image {
+        flex-basis: 34%;
+    }
+}
+
+@media (min-width:1200px) {
+    .single-blog .container aside .recent-products .box .text h4 {
+        font-size: 14px;
+    }
+}
+
+
+/* End Aside */

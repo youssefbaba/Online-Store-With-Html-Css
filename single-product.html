@@ -96,8 +96,6 @@
                                 <li><a href="shop.html">Shop</a></li>
                                 <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
                                 <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
-                                <li><a href="shop-list.html">Shop List</a></li>
-                                <li><a href="shop-list-right-sidebar.html">Shop List right sidebar</a></li>
                                 <li><a href="single-product.html">Single Product</a></li>
                                 <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
                                 <li><a href="cart.html">Shopping Cart</a></li>
@@ -145,8 +143,6 @@
                             <li><a href="shop.html">Shop</a></li>
                             <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
                             <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
-                            <li><a href="shop-list.html">Shop List</a></li>
-                            <li><a href="shop-list-right-sidebar.html">Shop List right sidebar</a></li>
                             <li><a href="single-product.html">Single Product</a></li>
                             <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
                             <li><a href="cart.html">Shopping Cart</a></li>
@@ -235,7 +231,9 @@
                     <div class="info">
                         <div class="desc">
                             <div class="name-product-rating">
-                                <h4 class="name-product">partex special chair</h4>
+                                <h4 class="name-product">
+                                    <a href="single-product.html">partex special chair</a>
+                                </h4>
                                 <div class="rating">
                                     <ul>
                                         <li>
@@ -295,7 +293,8 @@
                             <div class="price">
                                 <span>$ 56.20</span>
                             </div>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                            <p>
+                                There are many variations of passages of Lorem Ipsum available, but the majority have
                                 be suffered
                                 alteration in some form, by injected humou or randomised words which donot look even
                                 slightly
@@ -667,7 +666,7 @@
                 <!-- Start Related Product -->
                 <div class="related-product">
                     <h4>Related Products</h4>
-                    <div class="products">
+                    <div class="products related-products">
                         <div class="product">
                             <div class="image-product">
                                 <a href="single-product.html">
@@ -797,6 +796,40 @@
                                 <span class="sale">Sale</span>
                                 <span class="price">
                                     $56.50
+                                </span>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="image-product">
+                                <a href="single-product.html">
+                                    <img src="images/shop/image_09.jpg" alt="product_05">
+                                </a>
+                            </div>
+                            <div class="info-product">
+                                <div class="top">
+                                    <h4><a href="single-product.html">Special Chair</a></h4>
+                                </div>
+                                <div class="bottom">
+                                    <div class="stars">
+                                        <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                        <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                        <a href="index.html"><i class="fa-solid fa-star"></i></a>
+                                        <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                        <a href="index.html"><i class="fa-solid fa-star-half-stroke"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-icons">
+                                <a href="wishlist.html" data-text="Wishlist"><i class="fa-solid fa-heart"></i></a>
+                                <a href="#" data-text="Quick View"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+                                <a href="#" data-text="Compare"><i class="fa-solid fa-arrows-rotate"></i></a>
+                                <a href="cart.html" data-text="Add To Cart"><i
+                                        class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                            <div class="sale-price">
+                                <span></span>
+                                <span class="price">
+                                    $46.50
                                 </span>
                             </div>
                         </div>
@@ -1008,28 +1041,25 @@
 
 
 
-        // Slick carousel
-        $('.products').slick({
-            speed: 500,
-            slidesToShow: 4,
+        // Slick carousel for related product
+        $('.related-products').slick({
+            slidesToShow: 3,
             slidesToScroll: 1,
             arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
             responsive: [{
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 3,
-                    }
-                },
-                {
                     breakpoint: 992,
                     settings: {
                         slidesToShow: 2,
+                        slidesToScroll: 1,
                     }
                 },
                 {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
+                        slidesToScroll: 1,
                     }
                 },
             ]

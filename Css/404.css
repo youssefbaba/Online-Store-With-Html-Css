@@ -1,0 +1,307 @@
+/* Start Breadcrumb  */
+.breadcrumb {
+    background-image: url("../images/breadcrumb/image_01.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.breadcrumb::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.breadcrumb .container {
+    /* for z-index */
+    position: relative;
+}
+
+.breadcrumb .container h2 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--white-color);
+    text-align: center;
+    padding: 40px 0;
+    text-transform: uppercase;
+}
+
+.breadcrumb .container ul {
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.breadcrumb .container ul li+li:before {
+    padding: 15px;
+    color: var(--white-color);
+    content: "/\00a0";
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.breadcrumb .container ul li a {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    transition: var(--main-transition) ease-in-out;
+    cursor: auto;
+}
+
+.breadcrumb .container ul li:first-child a {
+    cursor: pointer;
+}
+
+.breadcrumb .container ul li:first-child a:hover {
+    color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+    .breadcrumb {
+        top: 100px;
+    }
+
+    .breadcrumb .container h2 {
+        font-size: 45px;
+        line-height: 33px;
+        padding: 100px 0;
+    }
+}
+
+/* End Breadcrumb  */
+
+/* Start Main Content  */
+.main-content {
+    background-color: #f6f6f6;
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.main-content .container {
+    background-color: var(--white-color);
+    padding: 15px;
+}
+
+.main-content .container>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: var(--section-padding) 20px;
+}
+
+.main-content .container>div .image img {
+    max-width: 100%;
+}
+
+.main-content .container>div h4 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--color-dark);
+    margin-top: 60px;
+}
+
+.main-content .container>div h5 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-dark);
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.main-content .container>div form {
+    width: 100%;
+    background-color: var(--white-color);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.main-content .container>div form input {
+    flex-basis: 100%;
+    height: 40px;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 13px;
+    caret-color: var(--fourth-color);
+    color: var(--fourth-color);
+}
+
+.main-content .container>div form button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.main-content .container>div form button i {
+    color: var(--fourth-color);
+    font-size: 20px;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.main-content .container>div button:hover i,
+.main-content .container>div button:focus i {
+    color: var(--secondary-color);
+}
+
+.main-content .container>div>span {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-dark);
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.main-content .container>div>a {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 35px;
+    background-color: var(--white-color);
+    color: var(--color-dark);
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-content .container>div>a::before {
+    content: "Go To Home Page";
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.main-content .container>div>a:hover::before {
+    left: 0;
+}
+
+@media (min-width:768px) {
+    .main-content {
+        margin-top: 100px;
+        padding-top: calc(var(--section-padding) * 2);
+        padding-bottom: calc(var(--section-padding) * 2);
+    }
+
+    .main-content .container {
+        padding: 30px;
+    }
+
+    .main-content .container>div {
+        background-color: #f6f6f6;
+        padding: calc(var(--section-padding) * 2) 40px;
+    }
+
+}
+
+/* End Main Content  */
+
+
+
+
+
+
+
+
+/* Start Footer */
+footer {
+    background-color: #eeeeee;
+}
+
+footer .container .email-newsletters {
+    flex-basis: 100%;
+}
+
+footer .container .email-newsletters form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .container .email-newsletters form input {
+    flex-basis: 100%;
+    border: none;
+    background-color: #f6f6f6;
+    padding: 12px 20px;
+    caret-color: var(--fourth-color);
+}
+
+footer .container .email-newsletters form button {
+    background-color: #f7f7f7;
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer .container .email-newsletters form button::before {
+    content: "Subscribe";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    transition: var(--main-transition) ease-in-out;
+}
+
+footer .container .email-newsletters form button:hover::before {
+    left: 0;
+}
+
+footer .container .email-newsletters form button:focus,
+footer .container .email-newsletters form input:focus {
+    outline: none;
+}
+
+footer .container .email-newsletters form input::placeholder {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--fourth-color);
+}
+
+@media (min-width: 768px) {
+    footer .container .email-newsletters {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    footer .container .email-newsletters {
+        flex-basis: calc(100% / 3);
+    }
+}
+
+/* End Footer */

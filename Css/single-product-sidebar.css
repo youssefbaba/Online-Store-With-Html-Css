@@ -10,11 +10,13 @@ main .container aside form {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    margin-top: 30px;
 }
 
 main .container aside form input {
     flex-basis: 100%;
-    padding: 15px;
+    height: 50px;
+    padding: 0 15px;
     border: none;
     outline: none;
     background-color: transparent;
@@ -45,13 +47,14 @@ main .container aside form button:focus i {
     color: var(--secondary-color);
 }
 
-main .container aside .categories .scroll {
-    height: 290px;
-}
 
 main .container aside .categories {
     background-color: var(--white-color);
     padding: 30px 15px;
+}
+
+main .container aside .categories .scroll {
+    height: 290px;
 }
 
 main .container aside h4 {
@@ -63,25 +66,22 @@ main .container aside h4 {
     margin-bottom: 30px;
 }
 
-main .container aside .categories>ul {
-    padding-left: 20px;
+main .container aside .categories>ul>li.accordion span,
+main .container aside .categories>ul>li.accordion+.panel a {
+    display: block;
+    line-height: 25px;
+    transition: var(--main-transition) ease-in-out;
 }
 
 main .container aside .categories>ul>li.accordion span {
     color: var(--color-dark);
-    display: block;
     font-size: 14px;
-    line-height: 25px;
     cursor: pointer;
-    transition: var(--main-transition) ease-in-out;
 }
 
 main .container aside .categories>ul>li.accordion+.panel a {
     color: var(--fourth-color);
-    display: block;
     font-size: 13px;
-    line-height: 25px;
-    transition: var(--main-transition) ease-in-out;
 }
 
 main .container aside .categories>ul li.active span,
@@ -190,6 +190,10 @@ main .container aside .best-brand a::after {
         margin-top: 30px;
     }
 
+    main .container aside form {
+        margin-top: 0;
+    }
+
     main .container aside .recent-products .box .text h4 {
         font-size: 15px;
     }
@@ -202,7 +206,7 @@ main .container aside .best-brand a::after {
 @media (min-width: 992px) {
     main .container {
         display: flex;
-        justify-content: space-between;
+        gap: 30px;
     }
 
     main .container .main-content {

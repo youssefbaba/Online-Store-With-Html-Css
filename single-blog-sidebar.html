@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Blog SideBar Page</title>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="Css/style.css">
+    <!-- Single Blog  Stylesheet -->
+    <link rel="stylesheet" href="Css/single-blog.css">
+    <!-- Single Blog SideBar Stylesheet -->
+    <link rel="stylesheet" href="Css/single-blog-sidebar.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="Css/normalize.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start Header -->
+    <header>
+        <ul class="logo-cart fixed-top">
+            <li class="logo">
+                <a href="index.html">
+                    <img src="images/header/Logo.png" alt="Logo">
+                </a>
+            </li>
+            <li class="cart">
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping" data-number="2"></i>
+                </a>
+                <div class="hover">
+                    <p>You have<span>03 items</span>in your shopping bag</p>
+                    <div class="product product-one">
+                        <div class="image">
+                            <a href="single-product.html"><img src="images/cart/cart_01.jpg" alt="cart_01"></a>
+                        </div>
+                        <div class="description">
+                            <a href="single-product.html">
+                                <h4>Small Stool</h4>
+                            </a>
+                            <p>Price : <span>$</span> <span>300.00</span></p>
+                            <p>Qt : <span>02</span></p>
+                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="product product-two">
+                        <div class="image">
+                            <a href="single-product.html"><img src="images/cart/cart_02.jpg" alt="cart_02"></a>
+                        </div>
+                        <div class="description">
+                            <a href="single-product.html">
+                                <h4>Walnut Stand</h4>
+                            </a>
+                            <p>Price : <span>£</span> <span>200.00</span></p>
+                            <p>Qt : <span>01</span></p>
+                        </div>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="total">
+                        <h4>Total</h4>
+                        <h4><span>$</span> <span> 500.00</span></h4>
+                    </div>
+                    <div class="links">
+                        <a href="cart.html" data-text="view cart">View cart</a>
+                        <a href="checkout.html" data-text="check out">Check out</a>
+                    </div>
+                </div>
+            </li>
+            <li class="bars" onclick="openNav()"><i class="fa-solid fa-bars"></i></li>
+            <li class="nav-menu" id="my-nav-menu">
+                <i class="fa-solid fa-xmark close" onclick="closeNav()"></i>
+                <ul>
+                    <li><a href="index.html" data-text="Home">Home</a></li>
+                    <li><a href="shop.html" data-text="Products">Products</a></li>
+                    <li><a href="shop-sidebar.html" data-text="Accesories">Accesories</a></li>
+                    <li><a href="shop-list.html" data-text="Lookbook">Lookbook</a></li>
+                    <li><a href="blog.html" data-text="Blog">Blog</a></li>
+                    <li class="pages">
+                        <a href="index.html" data-text="Pages">Pages</a>
+                        <div class="sub-nav-menu">
+                            <ul>
+                                <li class="sub-nav-menu-title">Page's</li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                                <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
+                                <li><a href="single-product.html">Single Product</a></li>
+                                <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
+                                <li><a href="cart.html">Shopping Cart</a></li>
+                                <li><a href="wishlist.html">Wishlist</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                                <li><a href="order.html">Order</a></li>
+                                <li><a href="login.html">login / Registration</a></li>
+                                <li><a href="my-account.html">My Account</a></li>
+                                <li><a href="404.html">404</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="single-blog.html">Single Blog</a></li>
+                                <li><a href="single-blog-sidebar.html">Single Blog Sidebar</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="about.html" data-text="About us">About us</a></li>
+                    <li><a href="contact.html" data-text="Contact">Contact</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu">
+            <div>Menu</div>
+            <input type="checkbox" class="toggle-Sidebar" id="toggle-Sidebar">
+            <label class="bars-icon" for="toggle-Sidebar">
+                <div class="bar top"></div>
+                <div class="bar center"></div>
+                <div class="bar bottom"></div>
+            </label>
+            <nav class="navigation" id="my-navigation">
+                <ul>
+                    <li class="home"><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Products</a></li>
+                    <li><a href="shop-sidebar.html">Accesories</a></li>
+                    <li><a href="shop-list.html">Lookbook</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li class="pages">
+                        <a href="index.html">
+                            <span>pages</span>
+                            <label class="plus-icon" for="toggle-plus"></label>
+                        </a>
+                        <input type="checkbox" id="toggle-plus" class="toggle-plus">
+                        <ul class="sub-menu">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                            <li><a href="shop-grid-right-sidebar.html">Shop Right Sidebar</a></li>
+                            <li><a href="single-product.html">Single Product</a></li>
+                            <li><a href="single-product-sidebar.html">Single Product Sidebar</a></li>
+                            <li><a href="cart.html">Shopping Cart</a></li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="checkout.html">Checkout</a></li>
+                            <li><a href="order.html">Order</a></li>
+                            <li><a href="login.html">login / Registration</a></li>
+                            <li><a href="my-account.html">My Account</a></li>
+                            <li><a href="404.html">404</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="single-blog.html">Single Blog</a></li>
+                            <li><a href="single-blog-sidebar.html">Single Blog Sidebar</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <h2>Single Blog SideBar</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Single Blog SideBar</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+    <!-- Start Single Blog -->
+    <div class="single-blog">
+        <div class="container">
+            <div class="main-content">
+                <div class="image">
+                    <img src="images/blog/single_blog_01.jpg" alt="single_blog_01">
+                    <div class="icons">
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Thomas</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>59</span>
+                            <span>likes</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-comment"></i>
+                            <span>29</span>
+                            <span>Comments</span>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <span>29</span>
+                            <span>Share</span>
+                        </a>
+                    </div>
+                    <div class="date">
+                        <span>30</span>
+                        <span>June</span>
+                    </div>
+                </div>
+                <div class="title-content">
+                    <h4><a href="single-blog.html">farniture drawing 2021</a></h4>
+                    <p>
+                        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled
+                        and
+                        demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot
+                        foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail
+                        in their duty through weakness of will, which is the same as saying through shrink ing from toil
+                        and pain. These cases are perfectly simple and easy to distinguish. In a free hour. On the other
+                        hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized
+                        by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty
+                        through weakness of will
+                    </p>
+                    <p>
+                        which is the same as saying through shrink ing from toil and pain. These cases are perfectly
+                        simple and easy to distinguish. In a free hour.On the other hand, we denounce with righteous
+                        indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the
+                        moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to
+                        ensue; and equal blame belongs to those who fail in their duty through weakness of will, which
+                        is the same as saying through shrink ing from toil and pain. These cases are perfectly simple
+                        and easy to distinguish. In a free hour.
+                    </p>
+                </div>
+                <div class="share-tags">
+                    <div class="share">
+                        <span>Share</span>
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-vimeo-v"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="tags">
+                        <span>Tags</span>
+                        <ul>
+                            <li><a href="#">Chair</a></li>
+                            <li><a href="#">Furtinure</a></li>
+                            <li><a href="#">Light</a></li>
+                            <li><a href="#">Table</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="authority">
+                    <div class="image">
+                        <img src="images/blog/testimonilas_01.jpg" alt="testimonilas_01">
+                    </div>
+                    <div class="text">
+                        <h3>Salim Rana</h3>
+                        <p>
+                            No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because
+                            those
+                            who do not know how to pursue pleasure rationally encounter conseques ences that are
+                            extremely
+                            painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself,
+                            because it is pain, but because occasionally car mstances occur in which toil and pain can
+                            procure him some great pleasure.
+                        </p>
+                    </div>
+                </div>
+                <div class="reviews">
+                    <div class="customer-review">
+                        <h4>customer review</h4>
+                        <div class="box">
+                            <div class="image">
+                                <img src="images/single-product/image_07.jpg" alt="image_07">
+                            </div>
+                            <div class="text">
+                                <div>
+                                    <div>
+                                        <h4>gerald barnes</h4>
+                                        <p class="date">27 Jun, 2021 at 2:30pm</p>
+                                    </div>
+                                    <div class="links">
+                                        <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                        <a href="#"><i class="fa-solid fa-reply"></i></a>
+                                    </div>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                                    reprehenderit
+                                    adipisci sint voluptates quo culpa at! Autem, ducimus repellendus alias
+                                    eligendi amet
+                                    ipsam culpa rerum veniam, doloribus quo, tenetur esse.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="image">
+                                <img src="images/single-product/image_07.jpg" alt="image_07">
+                            </div>
+                            <div class="text">
+                                <div>
+                                    <div>
+                                        <h4>gerald barnes</h4>
+                                        <p class="date">27 Jun, 2021 at 2:30pm</p>
+                                    </div>
+                                    <div class="links">
+                                        <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                        <a href="#"><i class="fa-solid fa-reply"></i></a>
+                                    </div>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                                    reprehenderit
+                                    adipisci sint voluptates quo culpa at! Autem, ducimus repellendus alias
+                                    eligendi amet
+                                    ipsam culpa rerum veniam, doloribus quo, tenetur esse.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leave-your-review">
+                        <h4>leave your review</h4>
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your name here ...">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" placeholder="Your Subject ...">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="address" placeholder="Your Review Here"></textarea>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" data-text="Submit Review">Submit Review</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <aside>
+                <form action="#">
+                    <input type="text" name="search" placeholder="Search Here">
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <div class="categories">
+                    <h4>Categories</h4>
+                    <ul class="scroll">
+                        <li class="accordion"><span>Chair</span></li>
+                        <ul class="panel">
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Striped Shirts</a></li>
+                            <li><a href="#">Half Shirts</a></li>
+                            <li><a href="#">Formal Shirts</a></li>
+                            <li><a href="#">Bilazers</a></li>
+                        </ul>
+                        <li class="accordion"><span>Furniture</span></li>
+                        <ul class="panel" id="open">
+                            <li><a href="#">Men Bag</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Watc</a></li>
+                            <li><a href="#">T-Shirt</a></li>
+                            <li><a href="#">Shirt</a></li>
+                        </ul>
+                        <li class="accordion"><span>Accessories</span></li>
+                        <ul class="panel">
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Striped Shirts</a></li>
+                            <li><a href="#">Half Shirts</a></li>
+                            <li><a href="#">Formal Shirts</a></li>
+                            <li><a href="#">Bilazers</a></li>
+                        </ul>
+                        <li class="accordion"><span>Top Brands</span></li>
+                        <ul class="panel">
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Striped Shirts</a></li>
+                            <li><a href="#">Half Shirts</a></li>
+                            <li><a href="#">Formal Shirts</a></li>
+                            <li><a href="#">Bilazers</a></li>
+                        </ul>
+                        <li class="accordion"><span>Jewelry</span></li>
+                        <ul class="panel">
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Striped Shirts</a></li>
+                            <li><a href="#">Half Shirts</a></li>
+                            <li><a href="#">Formal Shirts</a></li>
+                            <li><a href="#">Bilazers</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="recent-products">
+                    <h4>Recent products</h4>
+                    <div class="box">
+                        <div class="image">
+                            <a href="single-blog.html">
+                                <img src="images/blog-side-bar/image_01.jpg" alt="image_01">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h4><a href="single-blog.html">Dummy Blog</a></h4>
+                            <a href="single-blog.html">June 12, 2017</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <a href="single-blog.html">
+                                <img src="images/blog-side-bar/image_02.jpg" alt="image_02">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h4><a href="single-blog.html">Dummy Blog</a></h4>
+                            <a href="single-blog.html">June 12, 2017</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <a href="single-blog.html">
+                                <img src="images/blog-side-bar/image_03.jpg" alt="image_03">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h4><a href="single-blog.html">Dummy Blog</a></h4>
+                            <a href="single-blog.html">June 12, 2017</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <a href="single-blog.html">
+                                <img src="images/blog-side-bar/image_04.jpg" alt="image_04">
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h4><a href="single-blog.html">Dummy Blog</a></h4>
+                            <a href="single-blog.html">June 12, 2017</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="recent-comments">
+                    <h4>Recent Comments</h4>
+                    <div class="comment">
+                        <h5><a href="#">Mary Isabella</a></h5>
+                        <p>There are many variations of passag of Lorem Ipsum available...</p>
+                    </div>
+                    <div class="comment">
+                        <h5><a href="#">Michael Charles</a></h5>
+                        <p>There are many variations of passag of Lorem Ipsum available...</p>
+                    </div>
+                    <div class="comment">
+                        <h5><a href="#">avid William</a></h5>
+                        <p>There are many variations of passag of Lorem Ipsum available...</p>
+                    </div>
+                    <div class="comment">
+                        <h5><a href="#">atthew Daniel</a></h5>
+                        <p>There are many variations of passag of Lorem Ipsum available...</p>
+                    </div>
+                </div>
+                <div class="best-brand">
+                    <a href="single-blog.html">
+                        <img src="images/single-product-sidaber/image_05.jpg" alt="image_05">
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <!-- End Single Blog -->
+    <!-- Start Footer -->
+    <footer>
+        <div class="container">
+            <div class="contact-us">
+                <h2>Contact Us</h2>
+                <div class="content">
+                    <p>Address: </p>
+                    <address>
+                        28 Green Tower, Street Name,<br>
+                        New York City, USA
+                    </address>
+                    <p>Call-Phone: </p>
+                    <a href="tel:+880 1234 123489">+880 1234 123489</a>
+                    <p>Email:</p>
+                    <a href="mailto:your-email@gmail.com">your-email@gmail.com</a>
+                </div>
+            </div>
+            <ul class="accounts">
+                <h2>accounts</h2>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Account</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Wishlist</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i> My Cart</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Sign In</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Check out</a></li>
+            </ul>
+            <ul class="Shipping">
+                <h2>Shipping</h2>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>New Products</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Top Sellers</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Manufactirers </a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Suppliers</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-dot"></i>Specials</a></li>
+            </ul>
+            <div class="email-newsletters">
+                <h2>Email Newsletters</h2>
+                <form action="">
+                    <input type="text" name="email" placeholder="Email Address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start Copyright And Payment -->
+    <div class="copyright-payment">
+        <div class="container">
+            <p class="copyright"> &#169; CodeCarnival 2021. All Rights Reserved.</p>
+            <div class="images-payment">
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_01.png" alt="image_01">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_02.png" alt="image_02">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_03.png" alt="image_03">
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="#">
+                        <img src="images/payment/image_04.png" alt="image_04">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="scroll-to-top" onclick="scrollTop()"><i class="fa-solid fa-angles-up"></i></a>
+    </div>
+    <!-- End Copyright And Payment -->
+
+    <script>
+        // Declaration Variables
+        var bars = document.querySelector('.bars-icon');
+        var plus = document.querySelector('.plus-icon');
+        var navbar = document.querySelector('.fixed-top');
+        var mylink = document.getElementById("scroll-to-top");
+
+
+        // change icon bars to X
+        bars.addEventListener('click', function () {
+            bars.classList.toggle('change-bars');
+        })
+
+
+        // change icon plus to minus
+        plus.addEventListener('click', function () {
+            plus.classList.toggle('change-plus');
+        })
+
+
+        // Open Aside bar
+        function openNav() {
+            document.getElementById("my-nav-menu").style.left = "0px";
+        }
+
+
+        // Close Aside bar
+        function closeNav() {
+            document.getElementById("my-nav-menu").style.left = "-225px";
+        }
+
+        // Scroll To Top when click on button and change color of header when scroll down
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mylink.style.display = "block";
+            } else {
+                mylink.style.display = "none";
+            }
+            if (window.scrollY > 100) {
+                navbar.classList.add('nav-active');
+            } else {
+                navbar.classList.remove('nav-active');
+            }
+        }
+
+
+        // When the user clicks on the button, scroll to the top of the document
+        function scrollTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+
+        // Fullscreen Overlay
+        function openOverlaySearch() {
+            document.getElementById("my-overlay-search").style.transform = "translateY(0%)";
+        }
+
+        function closeOverlaySearch() {
+            document.getElementById("my-overlay-search").style.transform = "translateY(-100%)";
+        }
+
+        // Open one accordion tab at one time
+        let accHeading = document.querySelectorAll(".accordion");
+        let accPanel = document.querySelectorAll(".panel");
+        for (let i = 0; i < accHeading.length; i++) {
+            accHeading[i].onclick = function () {
+                if (this.nextElementSibling.style.maxHeight) {
+                    hidePanels();
+                } else {
+                    showPanel(this);
+                }
+            };
+        }
+
+        function showPanel(elem) {
+            hidePanels();
+            elem.classList.add("active");
+            elem.nextElementSibling.style.maxHeight = elem.nextElementSibling.scrollHeight + "px";
+        }
+
+        function hidePanels() {
+            for (let i = 0; i < accPanel.length; i++) {
+                accPanel[i].style.maxHeight = null;
+                accHeading[i].classList.remove("active");
+            }
+        }
+        showPanel(accHeading[1]);
+    </script>
+</body>
+
+</html>
